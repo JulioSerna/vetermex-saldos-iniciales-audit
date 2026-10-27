@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Vetermex - Auditoría y Comparativa de Saldos Iniciales</title>
+  <title>Vetermex - Auditoría y Comparativa de Saldos Iniciales (Pruebas)</title>
   <style>
     
 @font-face {
@@ -129,13 +129,13 @@
       display: inline-flex;
       align-items: center;
       gap: 6px;
-      background: var(--vx-info-bg);
-      color: var(--vx-secondary);
+      background: #E8F5E9;
+      color: #2E7D32;
       padding: 6px 14px;
       border-radius: 20px;
       font-size: 12px;
       font-weight: 600;
-      border: 1px solid #BCE0FD;
+      border: 1px solid #C8E6C9;
     }
 
     /* Summary KPI Cards */
@@ -499,10 +499,10 @@
       </div>
       <div class="header-title">
         <h1>Vetermex — Auditoría de Saldos Iniciales</h1>
-        <p>Comparativa interactiva entre Balanza Drive (<code>Plantilla - Saldos iniciales 2.xlsx</code>) y Odoo 19 SaaS (<code>vetermex</code>) al <strong>30/Sep/2026</strong></p>
+        <p>Comparativa interactiva entre Balanza Drive (<code>Plantilla - Saldos iniciales 2.xlsx</code>) y Odoo 19 Pruebas (<code>saldos-iniciales-julio.odoo.com</code>) al <strong>30/Sep/2026</strong></p>
       </div>
       <div>
-        <span class="header-badge">● Entorno Producción (vetermex)</span>
+        <span class="header-badge">● Entorno Pruebas (saldos-iniciales-julio)</span>
       </div>
     </header>
 
@@ -521,7 +521,7 @@
       <div class="kpi-card kpi-cxp">
         <div class="kpi-label">Proveedores Nacionales (201.01.01)</div>
         <div class="kpi-value">$1,535,118.27</div>
-        <div class="kpi-subtext">13 facturas en plantilla Drive pendientes de importación ($1,478,016.71)</div>
+        <div class="kpi-subtext">12 facturas históricas FHP conciliadas con parcialidades en Odoo</div>
       </div>
       <div class="kpi-card kpi-audit">
         <div class="kpi-label">Proveedores Extranjeros (201.02.01)</div>
@@ -532,7 +532,10 @@
 
     <!-- Alert Box -->
     <div class="alert-box">
-      <strong>Guía de navegación del reporte:</strong> Los botones verdes <span class="badge" style="background:#E6F4EA; color:#0D652D;">Fila X ↗</span> abren directamente la fila correspondiente en la hoja de cálculo de Google Drive. Los botones rosas <span class="badge" style="background:#FFF0F4; color:#AC0340;">FHV/...</span>, <span class="badge" style="background:#FFF0F4; color:#AC0340;">BILL/...</span> o <span class="badge" style="background:#FFF0F4; color:#AC0340;">STJ/...</span> abren la factura original o póliza contable dentro de Odoo.
+      <strong>Enlaces funcionales garantizados:</strong> Todos los enlaces a Odoo apuntan a la instancia de pruebas <code>saldos-iniciales-julio.odoo.com</code> con el formato nativo del cliente web Odoo 19 (<code>/web#id=...&menu_id=...&action=...</code>).<br>
+      • <span class="badge" style="background:#FFF0F4; color:#AC0340;">14421 / FHV/...</span>: Abre directamente el formulario de la factura en Odoo.<br>
+      • <span class="badge" style="background:#ECEFF1; color:#455A64;">Póliza Parcialidades (-$X) ↗</span>: Abre directamente la póliza contable de parcialidades (MISC/2026/09/0001 para clientes o MISC/2026/09/0002 para proveedores).<br>
+      • <span class="badge" style="background:#E6F4EA; color:#0D652D;">Fila X ↗</span>: Abre la fila correspondiente en la hoja de Google Drive.
     </div>
 
     <!-- SECTION 1: CUENTAS POR COBRAR (CXC) -->
@@ -570,7 +573,7 @@
       <td class="text-right">$617,014.04</td>
       <td class="text-center"><a href="https://docs.google.com/spreadsheets/d/18rOH28VjAqJLih0DdWKO5jlNAoS41rxx/edit#gid=0&range=A19" target="_blank" class="drive-link" title="Ir a fila 19 en Google Drive">Fila 19 ↗</a></td>
       <td class="text-right">$617,014.02</td>
-      <td><a href="https://saldos-iniciales-julio.odoo.com/odoo/accounting/customer-invoices/125" target="_blank" class="odoo-link" title="FHV/2026/00033 (2026-09-30) : $74,901.00">14466</a>, <a href="https://saldos-iniciales-julio.odoo.com/odoo/accounting/customer-invoices/130" target="_blank" class="odoo-link" title="FHV/2026/00038 (2026-09-30) : $48,644.96">14511</a>, <a href="https://saldos-iniciales-julio.odoo.com/odoo/accounting/customer-invoices/138" target="_blank" class="odoo-link" title="FHV/2026/00046 (2026-09-30) : $65,377.20">14513</a>, <a href="https://saldos-iniciales-julio.odoo.com/odoo/accounting/customer-invoices/142" target="_blank" class="odoo-link" title="FHV/2026/00050 (2026-09-30) : $78,301.04">14512</a>, <a href="https://saldos-iniciales-julio.odoo.com/odoo/accounting/customer-invoices/148" target="_blank" class="odoo-link" title="FHV/2026/00056 (2026-09-30) : $58,541.95">14515</a>, <a href="https://saldos-iniciales-julio.odoo.com/odoo/accounting/customer-invoices/155" target="_blank" class="odoo-link" title="FHV/2026/00061 (2026-09-30) : $234,645.51">14467</a>, <a href="https://saldos-iniciales-julio.odoo.com/odoo/accounting/customer-invoices/162" target="_blank" class="odoo-link" title="FHV/2026/00067 (2026-09-30) : $56,602.36">14514</a></td>
+      <td><a href="https://saldos-iniciales-julio.odoo.com/web#id=162&cids=1&menu_id=130&action=262&model=account.move&view_type=form" target="_blank" class="odoo-link" title="FHV/2026/00067 (2026-09-30) : $56,602.36">14514</a>, <a href="https://saldos-iniciales-julio.odoo.com/web#id=155&cids=1&menu_id=130&action=262&model=account.move&view_type=form" target="_blank" class="odoo-link" title="FHV/2026/00061 (2026-09-30) : $234,645.51">14467</a>, <a href="https://saldos-iniciales-julio.odoo.com/web#id=148&cids=1&menu_id=130&action=262&model=account.move&view_type=form" target="_blank" class="odoo-link" title="FHV/2026/00056 (2026-09-30) : $58,541.95">14515</a>, <a href="https://saldos-iniciales-julio.odoo.com/web#id=142&cids=1&menu_id=130&action=262&model=account.move&view_type=form" target="_blank" class="odoo-link" title="FHV/2026/00050 (2026-09-30) : $78,301.04">14512</a>, <a href="https://saldos-iniciales-julio.odoo.com/web#id=138&cids=1&menu_id=130&action=262&model=account.move&view_type=form" target="_blank" class="odoo-link" title="FHV/2026/00046 (2026-09-30) : $65,377.20">14513</a>, <a href="https://saldos-iniciales-julio.odoo.com/web#id=130&cids=1&menu_id=130&action=262&model=account.move&view_type=form" target="_blank" class="odoo-link" title="FHV/2026/00038 (2026-09-30) : $48,644.96">14511</a>, <a href="https://saldos-iniciales-julio.odoo.com/web#id=125&cids=1&menu_id=130&action=262&model=account.move&view_type=form" target="_blank" class="odoo-link" title="FHV/2026/00033 (2026-09-30) : $74,901.00">14466</a></td>
       <td class="text-right text-warning"><strong>$-0.02</strong></td>
       <td class="text-center"><span class="badge badge-info">Redondeo (< $1)</span></td>
     </tr>
@@ -592,7 +595,7 @@
       <td class="text-right">$1,869,616.39</td>
       <td class="text-center"><a href="https://docs.google.com/spreadsheets/d/18rOH28VjAqJLih0DdWKO5jlNAoS41rxx/edit#gid=0&range=A33" target="_blank" class="drive-link" title="Ir a fila 33 en Google Drive">Fila 33 ↗</a></td>
       <td class="text-right">$1,870,239.39</td>
-      <td><a href="https://saldos-iniciales-julio.odoo.com/odoo/accounting/customer-invoices/91" target="_blank" class="odoo-link" title="FHV/2026/00002 (2026-09-30) : $302,260.51">14457</a>, <a href="https://saldos-iniciales-julio.odoo.com/odoo/accounting/customer-invoices/102" target="_blank" class="odoo-link" title="FHV/2026/00013 (2026-09-30) : $50,659.00">14421</a>, <a href="https://saldos-iniciales-julio.odoo.com/odoo/accounting/customer-invoices/111" target="_blank" class="odoo-link" title="FHV/2026/00022 (2026-09-30) : $512,126.40">14476</a>, <a href="https://saldos-iniciales-julio.odoo.com/odoo/accounting/customer-invoices/123" target="_blank" class="odoo-link" title="FHV/2026/00031 (2026-09-30) : $779,700.00">14368</a>, <a href="https://saldos-iniciales-julio.odoo.com/odoo/accounting/customer-invoices/146" target="_blank" class="odoo-link" title="FHV/2026/00054 (2026-09-30) : $169,320.48">14411</a>, <a href="https://saldos-iniciales-julio.odoo.com/odoo/accounting/customer-invoices/163" target="_blank" class="odoo-link" title="FHV/2026/00068 (2026-09-30) : $56,796.00">14436</a>, <a href="https://saldos-iniciales-julio.odoo.com/odoo/accounting/miscellaneous/205" target="_blank" class="odoo-link partial-link" title="Parcialidades en MISC/2026/09/0001: -$623.00">(-$623.00)</a></td>
+      <td><a href="https://saldos-iniciales-julio.odoo.com/web#id=163&cids=1&menu_id=130&action=262&model=account.move&view_type=form" target="_blank" class="odoo-link" title="FHV/2026/00068 (2026-09-30) : $56,796.00">14436</a>, <a href="https://saldos-iniciales-julio.odoo.com/web#id=146&cids=1&menu_id=130&action=262&model=account.move&view_type=form" target="_blank" class="odoo-link" title="FHV/2026/00054 (2026-09-30) : $169,320.48">14411</a>, <a href="https://saldos-iniciales-julio.odoo.com/web#id=123&cids=1&menu_id=130&action=262&model=account.move&view_type=form" target="_blank" class="odoo-link" title="FHV/2026/00031 (2026-09-30) : $779,700.00">14368</a>, <a href="https://saldos-iniciales-julio.odoo.com/web#id=111&cids=1&menu_id=130&action=262&model=account.move&view_type=form" target="_blank" class="odoo-link" title="FHV/2026/00022 (2026-09-30) : $512,126.40">14476</a>, <a href="https://saldos-iniciales-julio.odoo.com/web#id=102&cids=1&menu_id=130&action=262&model=account.move&view_type=form" target="_blank" class="odoo-link" title="FHV/2026/00013 (2026-09-30) : $50,659.00">14421</a>, <a href="https://saldos-iniciales-julio.odoo.com/web#id=91&cids=1&menu_id=130&action=262&model=account.move&view_type=form" target="_blank" class="odoo-link" title="FHV/2026/00002 (2026-09-30) : $302,260.51">14457</a>, <a href="https://saldos-iniciales-julio.odoo.com/web#id=205&cids=1&menu_id=143&action=259&model=account.move&view_type=form" target="_blank" class="odoo-link partial-link" title="Parcialidades en MISC/2026/09/0001 (F-14421, F-9030, etc.): -$623.00">Póliza Parcialidades (-$623.00) ↗</a></td>
       <td class="text-right text-danger"><strong>$623.00</strong></td>
       <td class="text-center"><span class="badge badge-warning">Diferencia</span></td>
     </tr>
@@ -603,7 +606,7 @@
       <td class="text-right">$326,480.76</td>
       <td class="text-center"><a href="https://docs.google.com/spreadsheets/d/18rOH28VjAqJLih0DdWKO5jlNAoS41rxx/edit#gid=0&range=A24" target="_blank" class="drive-link" title="Ir a fila 24 en Google Drive">Fila 24 ↗</a></td>
       <td class="text-right">$298,451.30</td>
-      <td><a href="https://saldos-iniciales-julio.odoo.com/odoo/accounting/customer-invoices/154" target="_blank" class="odoo-link" title="FHV/2026/00060 (2026-09-30) : $298,451.30">14516</a></td>
+      <td><a href="https://saldos-iniciales-julio.odoo.com/web#id=154&cids=1&menu_id=130&action=262&model=account.move&view_type=form" target="_blank" class="odoo-link" title="FHV/2026/00060 (2026-09-30) : $298,451.30">14516</a></td>
       <td class="text-right text-danger"><strong>$-28,029.46</strong></td>
       <td class="text-center"><span class="badge badge-warning">Diferencia</span></td>
     </tr>
@@ -614,7 +617,7 @@
       <td class="text-right">$442,500.00</td>
       <td class="text-center"><a href="https://docs.google.com/spreadsheets/d/18rOH28VjAqJLih0DdWKO5jlNAoS41rxx/edit#gid=0&range=A29" target="_blank" class="drive-link" title="Ir a fila 29 en Google Drive">Fila 29 ↗</a></td>
       <td class="text-right">$453,500.00</td>
-      <td><a href="https://saldos-iniciales-julio.odoo.com/odoo/accounting/customer-invoices/121" target="_blank" class="odoo-link" title="FHV/2026/00077 (2026-09-30) : $103,692.00">9690</a>, <a href="https://saldos-iniciales-julio.odoo.com/odoo/accounting/customer-invoices/122" target="_blank" class="odoo-link" title="FHV/2026/00075 (2026-09-30) : $159,012.08">9030</a>, <a href="https://saldos-iniciales-julio.odoo.com/odoo/accounting/customer-invoices/150" target="_blank" class="odoo-link" title="FHV/2026/00078 (2026-09-30) : $137,689.58">9410</a>, <a href="https://saldos-iniciales-julio.odoo.com/odoo/accounting/customer-invoices/151" target="_blank" class="odoo-link" title="FHV/2026/00079 (2026-09-30) : $117,840.28">9556</a>, <a href="https://saldos-iniciales-julio.odoo.com/odoo/accounting/miscellaneous/205" target="_blank" class="odoo-link partial-link" title="Parcialidades en MISC/2026/09/0001: -$64,733.94">(-$64,733.94)</a></td>
+      <td><a href="https://saldos-iniciales-julio.odoo.com/web#id=151&cids=1&menu_id=130&action=262&model=account.move&view_type=form" target="_blank" class="odoo-link" title="FHV/2026/00079 (2026-09-30) : $117,840.28">9556</a>, <a href="https://saldos-iniciales-julio.odoo.com/web#id=150&cids=1&menu_id=130&action=262&model=account.move&view_type=form" target="_blank" class="odoo-link" title="FHV/2026/00078 (2026-09-30) : $137,689.58">9410</a>, <a href="https://saldos-iniciales-julio.odoo.com/web#id=121&cids=1&menu_id=130&action=262&model=account.move&view_type=form" target="_blank" class="odoo-link" title="FHV/2026/00077 (2026-09-30) : $103,692.00">9690</a>, <a href="https://saldos-iniciales-julio.odoo.com/web#id=122&cids=1&menu_id=130&action=262&model=account.move&view_type=form" target="_blank" class="odoo-link" title="FHV/2026/00075 (2026-09-30) : $159,012.08">9030</a>, <a href="https://saldos-iniciales-julio.odoo.com/web#id=205&cids=1&menu_id=143&action=259&model=account.move&view_type=form" target="_blank" class="odoo-link partial-link" title="Parcialidades en MISC/2026/09/0001 (F-14421, F-9030, etc.): -$64,733.94">Póliza Parcialidades (-$64,733.94) ↗</a></td>
       <td class="text-right text-danger"><strong>$11,000.00</strong></td>
       <td class="text-center"><span class="badge badge-warning">Diferencia</span></td>
     </tr>
@@ -625,7 +628,7 @@
       <td class="text-right">$409,442.17</td>
       <td class="text-center"><a href="https://docs.google.com/spreadsheets/d/18rOH28VjAqJLih0DdWKO5jlNAoS41rxx/edit#gid=0&range=A18" target="_blank" class="drive-link" title="Ir a fila 18 en Google Drive">Fila 18 ↗</a></td>
       <td class="text-right">$409,442.16</td>
-      <td><a href="https://saldos-iniciales-julio.odoo.com/odoo/accounting/customer-invoices/107" target="_blank" class="odoo-link" title="FHV/2026/00018 (2026-09-30) : $201,450.96">14320</a>, <a href="https://saldos-iniciales-julio.odoo.com/odoo/accounting/customer-invoices/109" target="_blank" class="odoo-link" title="FHV/2026/00020 (2026-09-30) : $207,991.20">14392</a></td>
+      <td><a href="https://saldos-iniciales-julio.odoo.com/web#id=109&cids=1&menu_id=130&action=262&model=account.move&view_type=form" target="_blank" class="odoo-link" title="FHV/2026/00020 (2026-09-30) : $207,991.20">14392</a>, <a href="https://saldos-iniciales-julio.odoo.com/web#id=107&cids=1&menu_id=130&action=262&model=account.move&view_type=form" target="_blank" class="odoo-link" title="FHV/2026/00018 (2026-09-30) : $201,450.96">14320</a></td>
       <td class="text-right text-success"><strong>$-0.01</strong></td>
       <td class="text-center"><span class="badge badge-success">Conciliado</span></td>
     </tr>
@@ -636,7 +639,7 @@
       <td class="text-right">$3,651,624.31</td>
       <td class="text-center"><a href="https://docs.google.com/spreadsheets/d/18rOH28VjAqJLih0DdWKO5jlNAoS41rxx/edit#gid=0&range=A30" target="_blank" class="drive-link" title="Ir a fila 30 en Google Drive">Fila 30 ↗</a></td>
       <td class="text-right">$3,651,624.31</td>
-      <td><a href="https://saldos-iniciales-julio.odoo.com/odoo/accounting/customer-invoices/97" target="_blank" class="odoo-link" title="FHV/2026/00008 (2026-09-30) : $683,276.03">14224</a>, <a href="https://saldos-iniciales-julio.odoo.com/odoo/accounting/customer-invoices/99" target="_blank" class="odoo-link" title="FHV/2026/00010 (2026-09-30) : $130,203.00">14406</a>, <a href="https://saldos-iniciales-julio.odoo.com/odoo/accounting/customer-invoices/103" target="_blank" class="odoo-link" title="FHV/2026/00014 (2026-09-30) : $39,426.24">14431</a>, <a href="https://saldos-iniciales-julio.odoo.com/odoo/accounting/customer-invoices/108" target="_blank" class="odoo-link" title="FHV/2026/00019 (2026-09-30) : $35,100.00">14439</a>, <a href="https://saldos-iniciales-julio.odoo.com/odoo/accounting/customer-invoices/113" target="_blank" class="odoo-link" title="FHV/2026/00024 (2026-09-30) : $92,514.00">14405</a>, <a href="https://saldos-iniciales-julio.odoo.com/odoo/accounting/customer-invoices/127" target="_blank" class="odoo-link" title="FHV/2026/00035 (2026-09-30) : $818,778.00">14454</a>, <a href="https://saldos-iniciales-julio.odoo.com/odoo/accounting/customer-invoices/153" target="_blank" class="odoo-link" title="FHV/2026/00059 (2026-09-30) : $47,884.00">14412</a>, <a href="https://saldos-iniciales-julio.odoo.com/odoo/accounting/customer-invoices/159" target="_blank" class="odoo-link" title="FHV/2026/00064 (2026-09-30) : $60,354.00">14477</a>, <a href="https://saldos-iniciales-julio.odoo.com/odoo/accounting/customer-invoices/160" target="_blank" class="odoo-link" title="FHV/2026/00065 (2026-09-30) : $30,726.00">14422</a>, <a href="https://saldos-iniciales-julio.odoo.com/odoo/accounting/customer-invoices/166" target="_blank" class="odoo-link" title="FHV/2026/00071 (2026-09-30) : $1,853,372.00">14510</a>, <a href="https://saldos-iniciales-julio.odoo.com/odoo/accounting/miscellaneous/205" target="_blank" class="odoo-link partial-link" title="Parcialidades en MISC/2026/09/0001: -$140,008.96">(-$140,008.96)</a></td>
+      <td><a href="https://saldos-iniciales-julio.odoo.com/web#id=166&cids=1&menu_id=130&action=262&model=account.move&view_type=form" target="_blank" class="odoo-link" title="FHV/2026/00071 (2026-09-30) : $1,853,372.00">14510</a>, <a href="https://saldos-iniciales-julio.odoo.com/web#id=160&cids=1&menu_id=130&action=262&model=account.move&view_type=form" target="_blank" class="odoo-link" title="FHV/2026/00065 (2026-09-30) : $30,726.00">14422</a>, <a href="https://saldos-iniciales-julio.odoo.com/web#id=159&cids=1&menu_id=130&action=262&model=account.move&view_type=form" target="_blank" class="odoo-link" title="FHV/2026/00064 (2026-09-30) : $60,354.00">14477</a>, <a href="https://saldos-iniciales-julio.odoo.com/web#id=153&cids=1&menu_id=130&action=262&model=account.move&view_type=form" target="_blank" class="odoo-link" title="FHV/2026/00059 (2026-09-30) : $47,884.00">14412</a>, <a href="https://saldos-iniciales-julio.odoo.com/web#id=127&cids=1&menu_id=130&action=262&model=account.move&view_type=form" target="_blank" class="odoo-link" title="FHV/2026/00035 (2026-09-30) : $818,778.00">14454</a>, <a href="https://saldos-iniciales-julio.odoo.com/web#id=113&cids=1&menu_id=130&action=262&model=account.move&view_type=form" target="_blank" class="odoo-link" title="FHV/2026/00024 (2026-09-30) : $92,514.00">14405</a>, <a href="https://saldos-iniciales-julio.odoo.com/web#id=108&cids=1&menu_id=130&action=262&model=account.move&view_type=form" target="_blank" class="odoo-link" title="FHV/2026/00019 (2026-09-30) : $35,100.00">14439</a>, <a href="https://saldos-iniciales-julio.odoo.com/web#id=103&cids=1&menu_id=130&action=262&model=account.move&view_type=form" target="_blank" class="odoo-link" title="FHV/2026/00014 (2026-09-30) : $39,426.24">14431</a>, <a href="https://saldos-iniciales-julio.odoo.com/web#id=99&cids=1&menu_id=130&action=262&model=account.move&view_type=form" target="_blank" class="odoo-link" title="FHV/2026/00010 (2026-09-30) : $130,203.00">14406</a>, <a href="https://saldos-iniciales-julio.odoo.com/web#id=97&cids=1&menu_id=130&action=262&model=account.move&view_type=form" target="_blank" class="odoo-link" title="FHV/2026/00008 (2026-09-30) : $683,276.03">14224</a>, <a href="https://saldos-iniciales-julio.odoo.com/web#id=205&cids=1&menu_id=143&action=259&model=account.move&view_type=form" target="_blank" class="odoo-link partial-link" title="Parcialidades en MISC/2026/09/0001 (F-14421, F-9030, etc.): -$140,008.96">Póliza Parcialidades (-$140,008.96) ↗</a></td>
       <td class="text-right text-success"><strong>$0.00</strong></td>
       <td class="text-center"><span class="badge badge-success">Conciliado</span></td>
     </tr>
@@ -647,7 +650,7 @@
       <td class="text-right">$107,415.60</td>
       <td class="text-center"><a href="https://docs.google.com/spreadsheets/d/18rOH28VjAqJLih0DdWKO5jlNAoS41rxx/edit#gid=0&range=A47" target="_blank" class="drive-link" title="Ir a fila 47 en Google Drive">Fila 47 ↗</a></td>
       <td class="text-right">$107,415.60</td>
-      <td><a href="https://saldos-iniciales-julio.odoo.com/odoo/accounting/customer-invoices/161" target="_blank" class="odoo-link" title="FHV/2026/00066 (2026-09-30) : $107,415.60">14471</a></td>
+      <td><a href="https://saldos-iniciales-julio.odoo.com/web#id=161&cids=1&menu_id=130&action=262&model=account.move&view_type=form" target="_blank" class="odoo-link" title="FHV/2026/00066 (2026-09-30) : $107,415.60">14471</a></td>
       <td class="text-right text-success"><strong>$0.00</strong></td>
       <td class="text-center"><span class="badge badge-success">Conciliado</span></td>
     </tr>
@@ -658,7 +661,7 @@
       <td class="text-right">$312,181.54</td>
       <td class="text-center"><a href="https://docs.google.com/spreadsheets/d/18rOH28VjAqJLih0DdWKO5jlNAoS41rxx/edit#gid=0&range=A17" target="_blank" class="drive-link" title="Ir a fila 17 en Google Drive">Fila 17 ↗</a></td>
       <td class="text-right">$312,181.20</td>
-      <td><a href="https://saldos-iniciales-julio.odoo.com/odoo/accounting/customer-invoices/131" target="_blank" class="odoo-link" title="FHV/2026/00039 (2026-09-30) : $312,181.20">14428</a></td>
+      <td><a href="https://saldos-iniciales-julio.odoo.com/web#id=131&cids=1&menu_id=130&action=262&model=account.move&view_type=form" target="_blank" class="odoo-link" title="FHV/2026/00039 (2026-09-30) : $312,181.20">14428</a></td>
       <td class="text-right text-warning"><strong>$-0.34</strong></td>
       <td class="text-center"><span class="badge badge-info">Redondeo (< $1)</span></td>
     </tr>
@@ -669,7 +672,7 @@
       <td class="text-right">$28,954.00</td>
       <td class="text-center"><a href="https://docs.google.com/spreadsheets/d/18rOH28VjAqJLih0DdWKO5jlNAoS41rxx/edit#gid=0&range=A23" target="_blank" class="drive-link" title="Ir a fila 23 en Google Drive">Fila 23 ↗</a></td>
       <td class="text-right">$28,954.00</td>
-      <td><a href="https://saldos-iniciales-julio.odoo.com/odoo/accounting/customer-invoices/137" target="_blank" class="odoo-link" title="FHV/2026/00045 (2026-09-30) : $28,954.00">14468</a></td>
+      <td><a href="https://saldos-iniciales-julio.odoo.com/web#id=137&cids=1&menu_id=130&action=262&model=account.move&view_type=form" target="_blank" class="odoo-link" title="FHV/2026/00045 (2026-09-30) : $28,954.00">14468</a></td>
       <td class="text-right text-success"><strong>$0.00</strong></td>
       <td class="text-center"><span class="badge badge-success">Conciliado</span></td>
     </tr>
@@ -680,7 +683,7 @@
       <td class="text-right">$104,707.07</td>
       <td class="text-center"><a href="https://docs.google.com/spreadsheets/d/18rOH28VjAqJLih0DdWKO5jlNAoS41rxx/edit#gid=0&range=A49" target="_blank" class="drive-link" title="Ir a fila 49 en Google Drive">Fila 49 ↗</a></td>
       <td class="text-right">$104,707.08</td>
-      <td><a href="https://saldos-iniciales-julio.odoo.com/odoo/accounting/customer-invoices/158" target="_blank" class="odoo-link" title="FHV/2026/00063 (2026-09-30) : $104,707.08">14508</a></td>
+      <td><a href="https://saldos-iniciales-julio.odoo.com/web#id=158&cids=1&menu_id=130&action=262&model=account.move&view_type=form" target="_blank" class="odoo-link" title="FHV/2026/00063 (2026-09-30) : $104,707.08">14508</a></td>
       <td class="text-right text-success"><strong>$0.01</strong></td>
       <td class="text-center"><span class="badge badge-success">Conciliado</span></td>
     </tr>
@@ -691,7 +694,7 @@
       <td class="text-right">$252,143.83</td>
       <td class="text-center"><a href="https://docs.google.com/spreadsheets/d/18rOH28VjAqJLih0DdWKO5jlNAoS41rxx/edit#gid=0&range=A46" target="_blank" class="drive-link" title="Ir a fila 46 en Google Drive">Fila 46 ↗</a></td>
       <td class="text-right">$252,143.51</td>
-      <td><a href="https://saldos-iniciales-julio.odoo.com/odoo/accounting/customer-invoices/96" target="_blank" class="odoo-link" title="FHV/2026/00007 (2026-09-30) : $28,196.92">14474</a>, <a href="https://saldos-iniciales-julio.odoo.com/odoo/accounting/customer-invoices/120" target="_blank" class="odoo-link" title="FHV/2026/00030 (2026-09-30) : $151,621.11">14438</a>, <a href="https://saldos-iniciales-julio.odoo.com/odoo/accounting/customer-invoices/139" target="_blank" class="odoo-link" title="FHV/2026/00047 (2026-09-30) : $72,325.48">14472</a></td>
+      <td><a href="https://saldos-iniciales-julio.odoo.com/web#id=139&cids=1&menu_id=130&action=262&model=account.move&view_type=form" target="_blank" class="odoo-link" title="FHV/2026/00047 (2026-09-30) : $72,325.48">14472</a>, <a href="https://saldos-iniciales-julio.odoo.com/web#id=120&cids=1&menu_id=130&action=262&model=account.move&view_type=form" target="_blank" class="odoo-link" title="FHV/2026/00030 (2026-09-30) : $151,621.11">14438</a>, <a href="https://saldos-iniciales-julio.odoo.com/web#id=96&cids=1&menu_id=130&action=262&model=account.move&view_type=form" target="_blank" class="odoo-link" title="FHV/2026/00007 (2026-09-30) : $28,196.92">14474</a></td>
       <td class="text-right text-warning"><strong>$-0.32</strong></td>
       <td class="text-center"><span class="badge badge-info">Redondeo (< $1)</span></td>
     </tr>
@@ -702,7 +705,7 @@
       <td class="text-right">$1,213,964.95</td>
       <td class="text-center"><a href="https://docs.google.com/spreadsheets/d/18rOH28VjAqJLih0DdWKO5jlNAoS41rxx/edit#gid=0&range=A34" target="_blank" class="drive-link" title="Ir a fila 34 en Google Drive">Fila 34 ↗</a></td>
       <td class="text-right">$1,213,964.95</td>
-      <td><a href="https://saldos-iniciales-julio.odoo.com/odoo/accounting/customer-invoices/115" target="_blank" class="odoo-link" title="FHV/2026/00026 (2026-09-30) : $639,580.70">14505</a>, <a href="https://saldos-iniciales-julio.odoo.com/odoo/accounting/customer-invoices/119" target="_blank" class="odoo-link" title="FHV/2026/00029 (2026-09-30) : $200,401.75">14403</a>, <a href="https://saldos-iniciales-julio.odoo.com/odoo/accounting/customer-invoices/141" target="_blank" class="odoo-link" title="FHV/2026/00049 (2026-09-30) : $122,742.04">14445</a>, <a href="https://saldos-iniciales-julio.odoo.com/odoo/accounting/customer-invoices/170" target="_blank" class="odoo-link" title="FHV/2026/00074 (2026-09-30) : $310,240.46">14501</a>, <a href="https://saldos-iniciales-julio.odoo.com/odoo/accounting/miscellaneous/205" target="_blank" class="odoo-link partial-link" title="Parcialidades en MISC/2026/09/0001: -$59,000.00">(-$59,000.00)</a></td>
+      <td><a href="https://saldos-iniciales-julio.odoo.com/web#id=170&cids=1&menu_id=130&action=262&model=account.move&view_type=form" target="_blank" class="odoo-link" title="FHV/2026/00074 (2026-09-30) : $310,240.46">14501</a>, <a href="https://saldos-iniciales-julio.odoo.com/web#id=141&cids=1&menu_id=130&action=262&model=account.move&view_type=form" target="_blank" class="odoo-link" title="FHV/2026/00049 (2026-09-30) : $122,742.04">14445</a>, <a href="https://saldos-iniciales-julio.odoo.com/web#id=119&cids=1&menu_id=130&action=262&model=account.move&view_type=form" target="_blank" class="odoo-link" title="FHV/2026/00029 (2026-09-30) : $200,401.75">14403</a>, <a href="https://saldos-iniciales-julio.odoo.com/web#id=115&cids=1&menu_id=130&action=262&model=account.move&view_type=form" target="_blank" class="odoo-link" title="FHV/2026/00026 (2026-09-30) : $639,580.70">14505</a>, <a href="https://saldos-iniciales-julio.odoo.com/web#id=205&cids=1&menu_id=143&action=259&model=account.move&view_type=form" target="_blank" class="odoo-link partial-link" title="Parcialidades en MISC/2026/09/0001 (F-14421, F-9030, etc.): -$59,000.00">Póliza Parcialidades (-$59,000.00) ↗</a></td>
       <td class="text-right text-success"><strong>$0.00</strong></td>
       <td class="text-center"><span class="badge badge-success">Conciliado</span></td>
     </tr>
@@ -713,7 +716,7 @@
       <td class="text-right">$41,508.07</td>
       <td class="text-center"><a href="https://docs.google.com/spreadsheets/d/18rOH28VjAqJLih0DdWKO5jlNAoS41rxx/edit#gid=0&range=A44" target="_blank" class="drive-link" title="Ir a fila 44 en Google Drive">Fila 44 ↗</a></td>
       <td class="text-right">$41,508.06</td>
-      <td><a href="https://saldos-iniciales-julio.odoo.com/odoo/accounting/customer-invoices/156" target="_blank" class="odoo-link" title="FHV/2026/00080 (2026-09-30) : $47,015.47">13272</a>, <a href="https://saldos-iniciales-julio.odoo.com/odoo/accounting/miscellaneous/205" target="_blank" class="odoo-link partial-link" title="Parcialidades en MISC/2026/09/0001: -$5,507.41">(-$5,507.41)</a></td>
+      <td><a href="https://saldos-iniciales-julio.odoo.com/web#id=156&cids=1&menu_id=130&action=262&model=account.move&view_type=form" target="_blank" class="odoo-link" title="FHV/2026/00080 (2026-09-30) : $47,015.47">13272</a>, <a href="https://saldos-iniciales-julio.odoo.com/web#id=205&cids=1&menu_id=143&action=259&model=account.move&view_type=form" target="_blank" class="odoo-link partial-link" title="Parcialidades en MISC/2026/09/0001 (F-14421, F-9030, etc.): -$5,507.41">Póliza Parcialidades (-$5,507.41) ↗</a></td>
       <td class="text-right text-warning"><strong>$-0.01</strong></td>
       <td class="text-center"><span class="badge badge-info">Redondeo (< $1)</span></td>
     </tr>
@@ -724,7 +727,7 @@
       <td class="text-right">$30,432.00</td>
       <td class="text-center"><a href="https://docs.google.com/spreadsheets/d/18rOH28VjAqJLih0DdWKO5jlNAoS41rxx/edit#gid=0&range=A22" target="_blank" class="drive-link" title="Ir a fila 22 en Google Drive">Fila 22 ↗</a></td>
       <td class="text-right">$30,432.00</td>
-      <td><a href="https://saldos-iniciales-julio.odoo.com/odoo/accounting/customer-invoices/126" target="_blank" class="odoo-link" title="FHV/2026/00034 (2026-09-30) : $30,432.00">14475</a></td>
+      <td><a href="https://saldos-iniciales-julio.odoo.com/web#id=126&cids=1&menu_id=130&action=262&model=account.move&view_type=form" target="_blank" class="odoo-link" title="FHV/2026/00034 (2026-09-30) : $30,432.00">14475</a></td>
       <td class="text-right text-success"><strong>$0.00</strong></td>
       <td class="text-center"><span class="badge badge-success">Conciliado</span></td>
     </tr>
@@ -735,7 +738,7 @@
       <td class="text-right">$238,296.00</td>
       <td class="text-center"><a href="https://docs.google.com/spreadsheets/d/18rOH28VjAqJLih0DdWKO5jlNAoS41rxx/edit#gid=0&range=A41" target="_blank" class="drive-link" title="Ir a fila 41 en Google Drive">Fila 41 ↗</a></td>
       <td class="text-right">$238,296.00</td>
-      <td><a href="https://saldos-iniciales-julio.odoo.com/odoo/accounting/customer-invoices/98" target="_blank" class="odoo-link" title="FHV/2026/00009 (2026-09-30) : $76,080.00">14449</a>, <a href="https://saldos-iniciales-julio.odoo.com/odoo/accounting/customer-invoices/110" target="_blank" class="odoo-link" title="FHV/2026/00021 (2026-09-30) : $162,216.00">14407</a></td>
+      <td><a href="https://saldos-iniciales-julio.odoo.com/web#id=110&cids=1&menu_id=130&action=262&model=account.move&view_type=form" target="_blank" class="odoo-link" title="FHV/2026/00021 (2026-09-30) : $162,216.00">14407</a>, <a href="https://saldos-iniciales-julio.odoo.com/web#id=98&cids=1&menu_id=130&action=262&model=account.move&view_type=form" target="_blank" class="odoo-link" title="FHV/2026/00009 (2026-09-30) : $76,080.00">14449</a></td>
       <td class="text-right text-success"><strong>$0.00</strong></td>
       <td class="text-center"><span class="badge badge-success">Conciliado</span></td>
     </tr>
@@ -746,7 +749,7 @@
       <td class="text-right">$438,665.89</td>
       <td class="text-center"><a href="https://docs.google.com/spreadsheets/d/18rOH28VjAqJLih0DdWKO5jlNAoS41rxx/edit#gid=0&range=A43" target="_blank" class="drive-link" title="Ir a fila 43 en Google Drive">Fila 43 ↗</a></td>
       <td class="text-right">$416,732.65</td>
-      <td><a href="https://saldos-iniciales-julio.odoo.com/odoo/accounting/customer-invoices/136" target="_blank" class="odoo-link" title="FHV/2026/00044 (2026-09-30) : $438,665.95">14455</a>, <a href="https://saldos-iniciales-julio.odoo.com/odoo/accounting/customer-invoices/761" target="_blank" class="odoo-link" title="RFHV/2026/00003 (2026-10-23) : $-21,933.30">Reversión de: FHV/2026/00044, PRONTO PAGO 5% F-14455</a></td>
+      <td><a href="https://saldos-iniciales-julio.odoo.com/web#id=761&cids=1&menu_id=130&action=262&model=account.move&view_type=form" target="_blank" class="odoo-link" title="RFHV/2026/00003 (2026-10-23) : $-21,933.30">Reversión de: FHV/2026/00044, PRONTO PAGO 5% F-14455</a>, <a href="https://saldos-iniciales-julio.odoo.com/web#id=136&cids=1&menu_id=130&action=262&model=account.move&view_type=form" target="_blank" class="odoo-link" title="FHV/2026/00044 (2026-09-30) : $438,665.95">14455</a></td>
       <td class="text-right text-danger"><strong>$-21,933.24</strong></td>
       <td class="text-center"><span class="badge badge-warning">Diferencia</span></td>
     </tr>
@@ -757,7 +760,7 @@
       <td class="text-right">$557,647.74</td>
       <td class="text-center"><a href="https://docs.google.com/spreadsheets/d/18rOH28VjAqJLih0DdWKO5jlNAoS41rxx/edit#gid=0&range=A52" target="_blank" class="drive-link" title="Ir a fila 52 en Google Drive">Fila 52 ↗</a></td>
       <td class="text-right">$623,311.69</td>
-      <td><a href="https://saldos-iniciales-julio.odoo.com/odoo/accounting/customer-invoices/118" target="_blank" class="odoo-link" title="FHV/2026/00076 (2026-09-30) : $80.34">12101</a>, <a href="https://saldos-iniciales-julio.odoo.com/odoo/accounting/customer-invoices/168" target="_blank" class="odoo-link" title="FHV/2026/00081 (2026-09-30) : $623,231.35">12100</a></td>
+      <td><a href="https://saldos-iniciales-julio.odoo.com/web#id=168&cids=1&menu_id=130&action=262&model=account.move&view_type=form" target="_blank" class="odoo-link" title="FHV/2026/00081 (2026-09-30) : $623,231.35">12100</a>, <a href="https://saldos-iniciales-julio.odoo.com/web#id=118&cids=1&menu_id=130&action=262&model=account.move&view_type=form" target="_blank" class="odoo-link" title="FHV/2026/00076 (2026-09-30) : $80.34">12101</a></td>
       <td class="text-right text-danger"><strong>$65,663.95</strong></td>
       <td class="text-center"><span class="badge badge-warning">Diferencia</span></td>
     </tr>
@@ -768,7 +771,7 @@
       <td class="text-right">$190,004.73</td>
       <td class="text-center"><a href="https://docs.google.com/spreadsheets/d/18rOH28VjAqJLih0DdWKO5jlNAoS41rxx/edit#gid=0&range=A40" target="_blank" class="drive-link" title="Ir a fila 40 en Google Drive">Fila 40 ↗</a></td>
       <td class="text-right">$205,178.79</td>
-      <td><a href="https://saldos-iniciales-julio.odoo.com/odoo/accounting/customer-invoices/95" target="_blank" class="odoo-link" title="FHV/2026/00006 (2026-09-30) : $123,830.43">14489</a>, <a href="https://saldos-iniciales-julio.odoo.com/odoo/accounting/customer-invoices/135" target="_blank" class="odoo-link" title="FHV/2026/00043 (2026-09-30) : $81,348.36">14491</a></td>
+      <td><a href="https://saldos-iniciales-julio.odoo.com/web#id=135&cids=1&menu_id=130&action=262&model=account.move&view_type=form" target="_blank" class="odoo-link" title="FHV/2026/00043 (2026-09-30) : $81,348.36">14491</a>, <a href="https://saldos-iniciales-julio.odoo.com/web#id=95&cids=1&menu_id=130&action=262&model=account.move&view_type=form" target="_blank" class="odoo-link" title="FHV/2026/00006 (2026-09-30) : $123,830.43">14489</a></td>
       <td class="text-right text-danger"><strong>$15,174.06</strong></td>
       <td class="text-center"><span class="badge badge-warning">Diferencia</span></td>
     </tr>
@@ -779,7 +782,7 @@
       <td class="text-right">$100,761.00</td>
       <td class="text-center"><a href="https://docs.google.com/spreadsheets/d/18rOH28VjAqJLih0DdWKO5jlNAoS41rxx/edit#gid=0&range=A35" target="_blank" class="drive-link" title="Ir a fila 35 en Google Drive">Fila 35 ↗</a></td>
       <td class="text-right">$100,761.00</td>
-      <td><a href="https://saldos-iniciales-julio.odoo.com/odoo/accounting/customer-invoices/105" target="_blank" class="odoo-link" title="FHV/2026/00016 (2026-09-30) : $100,761.00">14482</a></td>
+      <td><a href="https://saldos-iniciales-julio.odoo.com/web#id=105&cids=1&menu_id=130&action=262&model=account.move&view_type=form" target="_blank" class="odoo-link" title="FHV/2026/00016 (2026-09-30) : $100,761.00">14482</a></td>
       <td class="text-right text-success"><strong>$0.00</strong></td>
       <td class="text-center"><span class="badge badge-success">Conciliado</span></td>
     </tr>
@@ -790,7 +793,7 @@
       <td class="text-right">$76,434.00</td>
       <td class="text-center"><a href="https://docs.google.com/spreadsheets/d/18rOH28VjAqJLih0DdWKO5jlNAoS41rxx/edit#gid=0&range=A51" target="_blank" class="drive-link" title="Ir a fila 51 en Google Drive">Fila 51 ↗</a></td>
       <td class="text-right">$75,714.00</td>
-      <td><a href="https://saldos-iniciales-julio.odoo.com/odoo/accounting/customer-invoices/134" target="_blank" class="odoo-link" title="FHV/2026/00042 (2026-09-30) : $75,714.00">14323</a></td>
+      <td><a href="https://saldos-iniciales-julio.odoo.com/web#id=134&cids=1&menu_id=130&action=262&model=account.move&view_type=form" target="_blank" class="odoo-link" title="FHV/2026/00042 (2026-09-30) : $75,714.00">14323</a></td>
       <td class="text-right text-danger"><strong>$-720.00</strong></td>
       <td class="text-center"><span class="badge badge-warning">Diferencia</span></td>
     </tr>
@@ -812,7 +815,7 @@
       <td class="text-right">$148,703.14</td>
       <td class="text-center"><a href="https://docs.google.com/spreadsheets/d/18rOH28VjAqJLih0DdWKO5jlNAoS41rxx/edit#gid=0&range=A48" target="_blank" class="drive-link" title="Ir a fila 48 en Google Drive">Fila 48 ↗</a></td>
       <td class="text-right">$148,702.68</td>
-      <td><a href="https://saldos-iniciales-julio.odoo.com/odoo/accounting/customer-invoices/114" target="_blank" class="odoo-link" title="FHV/2026/00025 (2026-09-30) : $148,702.68">14479</a></td>
+      <td><a href="https://saldos-iniciales-julio.odoo.com/web#id=114&cids=1&menu_id=130&action=262&model=account.move&view_type=form" target="_blank" class="odoo-link" title="FHV/2026/00025 (2026-09-30) : $148,702.68">14479</a></td>
       <td class="text-right text-warning"><strong>$-0.46</strong></td>
       <td class="text-center"><span class="badge badge-info">Redondeo (< $1)</span></td>
     </tr>
@@ -823,7 +826,7 @@
       <td class="text-right">$152,578.26</td>
       <td class="text-center"><a href="https://docs.google.com/spreadsheets/d/18rOH28VjAqJLih0DdWKO5jlNAoS41rxx/edit#gid=0&range=A32" target="_blank" class="drive-link" title="Ir a fila 32 en Google Drive">Fila 32 ↗</a></td>
       <td class="text-right">$152,578.26</td>
-      <td><a href="https://saldos-iniciales-julio.odoo.com/odoo/accounting/customer-invoices/149" target="_blank" class="odoo-link" title="FHV/2026/00057 (2026-09-30) : $152,578.26">14460</a></td>
+      <td><a href="https://saldos-iniciales-julio.odoo.com/web#id=149&cids=1&menu_id=130&action=262&model=account.move&view_type=form" target="_blank" class="odoo-link" title="FHV/2026/00057 (2026-09-30) : $152,578.26">14460</a></td>
       <td class="text-right text-success"><strong>$0.00</strong></td>
       <td class="text-center"><span class="badge badge-success">Conciliado</span></td>
     </tr>
@@ -834,7 +837,7 @@
       <td class="text-right">$207,890.29</td>
       <td class="text-center"><a href="https://docs.google.com/spreadsheets/d/18rOH28VjAqJLih0DdWKO5jlNAoS41rxx/edit#gid=0&range=A50" target="_blank" class="drive-link" title="Ir a fila 50 en Google Drive">Fila 50 ↗</a></td>
       <td class="text-right">$207,890.30</td>
-      <td><a href="https://saldos-iniciales-julio.odoo.com/odoo/accounting/customer-invoices/93" target="_blank" class="odoo-link" title="FHV/2026/00004 (2026-09-30) : $106,786.00">14450</a>, <a href="https://saldos-iniciales-julio.odoo.com/odoo/accounting/customer-invoices/145" target="_blank" class="odoo-link" title="FHV/2026/00053 (2026-09-30) : $62,496.30">14499</a>, <a href="https://saldos-iniciales-julio.odoo.com/odoo/accounting/customer-invoices/152" target="_blank" class="odoo-link" title="FHV/2026/00058 (2026-09-30) : $38,608.00">14470</a></td>
+      <td><a href="https://saldos-iniciales-julio.odoo.com/web#id=152&cids=1&menu_id=130&action=262&model=account.move&view_type=form" target="_blank" class="odoo-link" title="FHV/2026/00058 (2026-09-30) : $38,608.00">14470</a>, <a href="https://saldos-iniciales-julio.odoo.com/web#id=145&cids=1&menu_id=130&action=262&model=account.move&view_type=form" target="_blank" class="odoo-link" title="FHV/2026/00053 (2026-09-30) : $62,496.30">14499</a>, <a href="https://saldos-iniciales-julio.odoo.com/web#id=93&cids=1&menu_id=130&action=262&model=account.move&view_type=form" target="_blank" class="odoo-link" title="FHV/2026/00004 (2026-09-30) : $106,786.00">14450</a></td>
       <td class="text-right text-success"><strong>$0.01</strong></td>
       <td class="text-center"><span class="badge badge-success">Conciliado</span></td>
     </tr>
@@ -845,7 +848,7 @@
       <td class="text-right">$729,454.48</td>
       <td class="text-center"><a href="https://docs.google.com/spreadsheets/d/18rOH28VjAqJLih0DdWKO5jlNAoS41rxx/edit#gid=0&range=A25" target="_blank" class="drive-link" title="Ir a fila 25 en Google Drive">Fila 25 ↗</a></td>
       <td class="text-right">$729,454.48</td>
-      <td><a href="https://saldos-iniciales-julio.odoo.com/odoo/accounting/customer-invoices/94" target="_blank" class="odoo-link" title="FHV/2026/00005 (2026-09-30) : $286,302.48">14504</a>, <a href="https://saldos-iniciales-julio.odoo.com/odoo/accounting/customer-invoices/104" target="_blank" class="odoo-link" title="FHV/2026/00015 (2026-09-30) : $217,072.00">14503</a>, <a href="https://saldos-iniciales-julio.odoo.com/odoo/accounting/customer-invoices/116" target="_blank" class="odoo-link" title="FHV/2026/00027 (2026-09-30) : $226,080.00">14356</a></td>
+      <td><a href="https://saldos-iniciales-julio.odoo.com/web#id=116&cids=1&menu_id=130&action=262&model=account.move&view_type=form" target="_blank" class="odoo-link" title="FHV/2026/00027 (2026-09-30) : $226,080.00">14356</a>, <a href="https://saldos-iniciales-julio.odoo.com/web#id=104&cids=1&menu_id=130&action=262&model=account.move&view_type=form" target="_blank" class="odoo-link" title="FHV/2026/00015 (2026-09-30) : $217,072.00">14503</a>, <a href="https://saldos-iniciales-julio.odoo.com/web#id=94&cids=1&menu_id=130&action=262&model=account.move&view_type=form" target="_blank" class="odoo-link" title="FHV/2026/00005 (2026-09-30) : $286,302.48">14504</a></td>
       <td class="text-right text-success"><strong>$0.00</strong></td>
       <td class="text-center"><span class="badge badge-success">Conciliado</span></td>
     </tr>
@@ -856,7 +859,7 @@
       <td class="text-right">$87,330.00</td>
       <td class="text-center"><a href="https://docs.google.com/spreadsheets/d/18rOH28VjAqJLih0DdWKO5jlNAoS41rxx/edit#gid=0&range=A27" target="_blank" class="drive-link" title="Ir a fila 27 en Google Drive">Fila 27 ↗</a></td>
       <td class="text-right">$87,330.00</td>
-      <td><a href="https://saldos-iniciales-julio.odoo.com/odoo/accounting/customer-invoices/92" target="_blank" class="odoo-link" title="FHV/2026/00003 (2026-09-30) : $87,330.00">14502</a></td>
+      <td><a href="https://saldos-iniciales-julio.odoo.com/web#id=92&cids=1&menu_id=130&action=262&model=account.move&view_type=form" target="_blank" class="odoo-link" title="FHV/2026/00003 (2026-09-30) : $87,330.00">14502</a></td>
       <td class="text-right text-success"><strong>$0.00</strong></td>
       <td class="text-center"><span class="badge badge-success">Conciliado</span></td>
     </tr>
@@ -867,7 +870,7 @@
       <td class="text-right">$128,642.03</td>
       <td class="text-center"><a href="https://docs.google.com/spreadsheets/d/18rOH28VjAqJLih0DdWKO5jlNAoS41rxx/edit#gid=0&range=A45" target="_blank" class="drive-link" title="Ir a fila 45 en Google Drive">Fila 45 ↗</a></td>
       <td class="text-right">$128,642.01</td>
-      <td><a href="https://saldos-iniciales-julio.odoo.com/odoo/accounting/customer-invoices/106" target="_blank" class="odoo-link" title="FHV/2026/00017 (2026-09-30) : $33,306.00">14434</a>, <a href="https://saldos-iniciales-julio.odoo.com/odoo/accounting/customer-invoices/128" target="_blank" class="odoo-link" title="FHV/2026/00036 (2026-09-30) : $95,336.01">14497</a></td>
+      <td><a href="https://saldos-iniciales-julio.odoo.com/web#id=128&cids=1&menu_id=130&action=262&model=account.move&view_type=form" target="_blank" class="odoo-link" title="FHV/2026/00036 (2026-09-30) : $95,336.01">14497</a>, <a href="https://saldos-iniciales-julio.odoo.com/web#id=106&cids=1&menu_id=130&action=262&model=account.move&view_type=form" target="_blank" class="odoo-link" title="FHV/2026/00017 (2026-09-30) : $33,306.00">14434</a></td>
       <td class="text-right text-warning"><strong>$-0.02</strong></td>
       <td class="text-center"><span class="badge badge-info">Redondeo (< $1)</span></td>
     </tr>
@@ -878,7 +881,7 @@
       <td class="text-right">$755,737.97</td>
       <td class="text-center"><a href="https://docs.google.com/spreadsheets/d/18rOH28VjAqJLih0DdWKO5jlNAoS41rxx/edit#gid=0&range=A36" target="_blank" class="drive-link" title="Ir a fila 36 en Google Drive">Fila 36 ↗</a></td>
       <td class="text-right">$743,376.86</td>
-      <td><a href="https://saldos-iniciales-julio.odoo.com/odoo/accounting/customer-invoices/101" target="_blank" class="odoo-link" title="FHV/2026/00012 (2026-09-30) : $743,376.86">14419</a></td>
+      <td><a href="https://saldos-iniciales-julio.odoo.com/web#id=101&cids=1&menu_id=130&action=262&model=account.move&view_type=form" target="_blank" class="odoo-link" title="FHV/2026/00012 (2026-09-30) : $743,376.86">14419</a></td>
       <td class="text-right text-danger"><strong>$-12,361.11</strong></td>
       <td class="text-center"><span class="badge badge-warning">Diferencia</span></td>
     </tr>
@@ -889,7 +892,7 @@
       <td class="text-right">$44,890.30</td>
       <td class="text-center"><a href="https://docs.google.com/spreadsheets/d/18rOH28VjAqJLih0DdWKO5jlNAoS41rxx/edit#gid=0&range=A38" target="_blank" class="drive-link" title="Ir a fila 38 en Google Drive">Fila 38 ↗</a></td>
       <td class="text-right">$44,890.31</td>
-      <td><a href="https://saldos-iniciales-julio.odoo.com/odoo/accounting/customer-invoices/157" target="_blank" class="odoo-link" title="FHV/2026/00062 (2026-09-30) : $44,890.31">14485</a></td>
+      <td><a href="https://saldos-iniciales-julio.odoo.com/web#id=157&cids=1&menu_id=130&action=262&model=account.move&view_type=form" target="_blank" class="odoo-link" title="FHV/2026/00062 (2026-09-30) : $44,890.31">14485</a></td>
       <td class="text-right text-success"><strong>$0.01</strong></td>
       <td class="text-center"><span class="badge badge-success">Conciliado</span></td>
     </tr>
@@ -900,7 +903,7 @@
       <td class="text-right">$27,807.00</td>
       <td class="text-center"><a href="https://docs.google.com/spreadsheets/d/18rOH28VjAqJLih0DdWKO5jlNAoS41rxx/edit#gid=0&range=A39" target="_blank" class="drive-link" title="Ir a fila 39 en Google Drive">Fila 39 ↗</a></td>
       <td class="text-right">$27,807.00</td>
-      <td><a href="https://saldos-iniciales-julio.odoo.com/odoo/accounting/customer-invoices/129" target="_blank" class="odoo-link" title="FHV/2026/00037 (2026-09-30) : $27,807.00">14469</a></td>
+      <td><a href="https://saldos-iniciales-julio.odoo.com/web#id=129&cids=1&menu_id=130&action=262&model=account.move&view_type=form" target="_blank" class="odoo-link" title="FHV/2026/00037 (2026-09-30) : $27,807.00">14469</a></td>
       <td class="text-right text-success"><strong>$0.00</strong></td>
       <td class="text-center"><span class="badge badge-success">Conciliado</span></td>
     </tr>
@@ -911,7 +914,7 @@
       <td class="text-right">$138,933.00</td>
       <td class="text-center"><a href="https://docs.google.com/spreadsheets/d/18rOH28VjAqJLih0DdWKO5jlNAoS41rxx/edit#gid=0&range=A20" target="_blank" class="drive-link" title="Ir a fila 20 en Google Drive">Fila 20 ↗</a></td>
       <td class="text-right">$138,933.00</td>
-      <td><a href="https://saldos-iniciales-julio.odoo.com/odoo/accounting/customer-invoices/124" target="_blank" class="odoo-link" title="FHV/2026/00032 (2026-09-30) : $38,877.00">14444</a>, <a href="https://saldos-iniciales-julio.odoo.com/odoo/accounting/customer-invoices/147" target="_blank" class="odoo-link" title="FHV/2026/00055 (2026-09-30) : $100,056.00">14509</a></td>
+      <td><a href="https://saldos-iniciales-julio.odoo.com/web#id=147&cids=1&menu_id=130&action=262&model=account.move&view_type=form" target="_blank" class="odoo-link" title="FHV/2026/00055 (2026-09-30) : $100,056.00">14509</a>, <a href="https://saldos-iniciales-julio.odoo.com/web#id=124&cids=1&menu_id=130&action=262&model=account.move&view_type=form" target="_blank" class="odoo-link" title="FHV/2026/00032 (2026-09-30) : $38,877.00">14444</a></td>
       <td class="text-right text-success"><strong>$0.00</strong></td>
       <td class="text-center"><span class="badge badge-success">Conciliado</span></td>
     </tr>
@@ -922,7 +925,7 @@
       <td class="text-right">$812,370.20</td>
       <td class="text-center"><a href="https://docs.google.com/spreadsheets/d/18rOH28VjAqJLih0DdWKO5jlNAoS41rxx/edit#gid=0&range=A42" target="_blank" class="drive-link" title="Ir a fila 42 en Google Drive">Fila 42 ↗</a></td>
       <td class="text-right">$790,245.34</td>
-      <td><a href="https://saldos-iniciales-julio.odoo.com/odoo/accounting/customer-invoices/144" target="_blank" class="odoo-link" title="FHV/2026/00052 (2026-09-30) : $260,563.41">14340</a>, <a href="https://saldos-iniciales-julio.odoo.com/odoo/accounting/customer-invoices/167" target="_blank" class="odoo-link" title="FHV/2026/00072 (2026-09-30) : $194,158.86">14443</a>, <a href="https://saldos-iniciales-julio.odoo.com/odoo/accounting/customer-invoices/169" target="_blank" class="odoo-link" title="FHV/2026/00073 (2026-09-30) : $371,300.56">14486</a>, <a href="https://saldos-iniciales-julio.odoo.com/odoo/accounting/customer-invoices/620" target="_blank" class="odoo-link" title="RFHV/2026/00001 (2026-10-19) : $-5,575.00">Reversión de: FHV/2026/00052, BONO REBATE 1Q</a>, <a href="https://saldos-iniciales-julio.odoo.com/odoo/accounting/customer-invoices/625" target="_blank" class="odoo-link" title="False (2026-10-19) : $0.00">Reversión de: FHV/2026/00072, Apoyo Charla Prevecta Oaxaca</a>, <a href="https://saldos-iniciales-julio.odoo.com/odoo/accounting/customer-invoices/626" target="_blank" class="odoo-link" title="RFHV/2026/00002 (2026-10-19) : $-16,548.99">Reversión de: FHV/2026/00072, Charla prevecta Oaxaca</a>, <a href="https://saldos-iniciales-julio.odoo.com/odoo/accounting/miscellaneous/205" target="_blank" class="odoo-link partial-link" title="Parcialidades en MISC/2026/09/0001: -$13,653.50">(-$13,653.50)</a></td>
+      <td><a href="https://saldos-iniciales-julio.odoo.com/web#id=625&cids=1&menu_id=130&action=262&model=account.move&view_type=form" target="_blank" class="odoo-link" title="False (2026-10-19) : $0.00">Reversión de: FHV/2026/00072, Apoyo Charla Prevecta Oaxaca</a>, <a href="https://saldos-iniciales-julio.odoo.com/web#id=626&cids=1&menu_id=130&action=262&model=account.move&view_type=form" target="_blank" class="odoo-link" title="RFHV/2026/00002 (2026-10-19) : $-16,548.99">Reversión de: FHV/2026/00072, Charla prevecta Oaxaca</a>, <a href="https://saldos-iniciales-julio.odoo.com/web#id=620&cids=1&menu_id=130&action=262&model=account.move&view_type=form" target="_blank" class="odoo-link" title="RFHV/2026/00001 (2026-10-19) : $-5,575.00">Reversión de: FHV/2026/00052, BONO REBATE 1Q</a>, <a href="https://saldos-iniciales-julio.odoo.com/web#id=169&cids=1&menu_id=130&action=262&model=account.move&view_type=form" target="_blank" class="odoo-link" title="FHV/2026/00073 (2026-09-30) : $371,300.56">14486</a>, <a href="https://saldos-iniciales-julio.odoo.com/web#id=167&cids=1&menu_id=130&action=262&model=account.move&view_type=form" target="_blank" class="odoo-link" title="FHV/2026/00072 (2026-09-30) : $194,158.86">14443</a>, <a href="https://saldos-iniciales-julio.odoo.com/web#id=144&cids=1&menu_id=130&action=262&model=account.move&view_type=form" target="_blank" class="odoo-link" title="FHV/2026/00052 (2026-09-30) : $260,563.41">14340</a>, <a href="https://saldos-iniciales-julio.odoo.com/web#id=205&cids=1&menu_id=143&action=259&model=account.move&view_type=form" target="_blank" class="odoo-link partial-link" title="Parcialidades en MISC/2026/09/0001 (F-14421, F-9030, etc.): -$13,653.50">Póliza Parcialidades (-$13,653.50) ↗</a></td>
       <td class="text-right text-danger"><strong>$-22,124.86</strong></td>
       <td class="text-center"><span class="badge badge-warning">Diferencia</span></td>
     </tr>
@@ -933,7 +936,7 @@
       <td class="text-right">$241,959.13</td>
       <td class="text-center"><a href="https://docs.google.com/spreadsheets/d/18rOH28VjAqJLih0DdWKO5jlNAoS41rxx/edit#gid=0&range=A28" target="_blank" class="drive-link" title="Ir a fila 28 en Google Drive">Fila 28 ↗</a></td>
       <td class="text-right">$241,959.13</td>
-      <td><a href="https://saldos-iniciales-julio.odoo.com/odoo/accounting/customer-invoices/89" target="_blank" class="odoo-link" title="FHV/2026/00001 (2026-09-30) : $26,430.00">14442</a>, <a href="https://saldos-iniciales-julio.odoo.com/odoo/accounting/customer-invoices/100" target="_blank" class="odoo-link" title="FHV/2026/00011 (2026-09-30) : $8,844.00">14435</a>, <a href="https://saldos-iniciales-julio.odoo.com/odoo/accounting/customer-invoices/112" target="_blank" class="odoo-link" title="FHV/2026/00023 (2026-09-30) : $62,820.10">14507</a>, <a href="https://saldos-iniciales-julio.odoo.com/odoo/accounting/customer-invoices/117" target="_blank" class="odoo-link" title="FHV/2026/00028 (2026-09-30) : $63,627.01">14462</a>, <a href="https://saldos-iniciales-julio.odoo.com/odoo/accounting/customer-invoices/143" target="_blank" class="odoo-link" title="FHV/2026/00051 (2026-09-30) : $25,701.01">14433</a>, <a href="https://saldos-iniciales-julio.odoo.com/odoo/accounting/customer-invoices/164" target="_blank" class="odoo-link" title="FHV/2026/00069 (2026-09-30) : $10,521.00">14463</a>, <a href="https://saldos-iniciales-julio.odoo.com/odoo/accounting/customer-invoices/165" target="_blank" class="odoo-link" title="FHV/2026/00070 (2026-09-30) : $44,016.01">14417</a></td>
+      <td><a href="https://saldos-iniciales-julio.odoo.com/web#id=165&cids=1&menu_id=130&action=262&model=account.move&view_type=form" target="_blank" class="odoo-link" title="FHV/2026/00070 (2026-09-30) : $44,016.01">14417</a>, <a href="https://saldos-iniciales-julio.odoo.com/web#id=164&cids=1&menu_id=130&action=262&model=account.move&view_type=form" target="_blank" class="odoo-link" title="FHV/2026/00069 (2026-09-30) : $10,521.00">14463</a>, <a href="https://saldos-iniciales-julio.odoo.com/web#id=143&cids=1&menu_id=130&action=262&model=account.move&view_type=form" target="_blank" class="odoo-link" title="FHV/2026/00051 (2026-09-30) : $25,701.01">14433</a>, <a href="https://saldos-iniciales-julio.odoo.com/web#id=117&cids=1&menu_id=130&action=262&model=account.move&view_type=form" target="_blank" class="odoo-link" title="FHV/2026/00028 (2026-09-30) : $63,627.01">14462</a>, <a href="https://saldos-iniciales-julio.odoo.com/web#id=112&cids=1&menu_id=130&action=262&model=account.move&view_type=form" target="_blank" class="odoo-link" title="FHV/2026/00023 (2026-09-30) : $62,820.10">14507</a>, <a href="https://saldos-iniciales-julio.odoo.com/web#id=100&cids=1&menu_id=130&action=262&model=account.move&view_type=form" target="_blank" class="odoo-link" title="FHV/2026/00011 (2026-09-30) : $8,844.00">14435</a>, <a href="https://saldos-iniciales-julio.odoo.com/web#id=89&cids=1&menu_id=130&action=262&model=account.move&view_type=form" target="_blank" class="odoo-link" title="FHV/2026/00001 (2026-09-30) : $26,430.00">14442</a></td>
       <td class="text-right text-success"><strong>$0.00</strong></td>
       <td class="text-center"><span class="badge badge-success">Conciliado</span></td>
     </tr>
@@ -955,7 +958,7 @@
       <td class="text-right">$309,311.74</td>
       <td class="text-center"><a href="https://docs.google.com/spreadsheets/d/18rOH28VjAqJLih0DdWKO5jlNAoS41rxx/edit#gid=0&range=A53" target="_blank" class="drive-link" title="Ir a fila 53 en Google Drive">Fila 53 ↗</a></td>
       <td class="text-right">$309,311.74</td>
-      <td><a href="https://saldos-iniciales-julio.odoo.com/odoo/accounting/customer-invoices/132" target="_blank" class="odoo-link" title="FHV/2026/00040 (2026-09-30) : $154,230.62">14488</a>, <a href="https://saldos-iniciales-julio.odoo.com/odoo/accounting/customer-invoices/133" target="_blank" class="odoo-link" title="FHV/2026/00041 (2026-09-30) : $155,081.12">14487</a></td>
+      <td><a href="https://saldos-iniciales-julio.odoo.com/web#id=133&cids=1&menu_id=130&action=262&model=account.move&view_type=form" target="_blank" class="odoo-link" title="FHV/2026/00041 (2026-09-30) : $155,081.12">14487</a>, <a href="https://saldos-iniciales-julio.odoo.com/web#id=132&cids=1&menu_id=130&action=262&model=account.move&view_type=form" target="_blank" class="odoo-link" title="FHV/2026/00040 (2026-09-30) : $154,230.62">14488</a></td>
       <td class="text-right text-success"><strong>$0.00</strong></td>
       <td class="text-center"><span class="badge badge-success">Conciliado</span></td>
     </tr>
@@ -966,7 +969,7 @@
       <td class="text-right">$80,347.23</td>
       <td class="text-center"><a href="https://docs.google.com/spreadsheets/d/18rOH28VjAqJLih0DdWKO5jlNAoS41rxx/edit#gid=0&range=A31" target="_blank" class="drive-link" title="Ir a fila 31 en Google Drive">Fila 31 ↗</a></td>
       <td class="text-right">$80,347.23</td>
-      <td><a href="https://saldos-iniciales-julio.odoo.com/odoo/accounting/customer-invoices/140" target="_blank" class="odoo-link" title="FHV/2026/00048 (2026-09-30) : $80,347.23">14493</a></td>
+      <td><a href="https://saldos-iniciales-julio.odoo.com/web#id=140&cids=1&menu_id=130&action=262&model=account.move&view_type=form" target="_blank" class="odoo-link" title="FHV/2026/00048 (2026-09-30) : $80,347.23">14493</a></td>
       <td class="text-right text-success"><strong>$0.00</strong></td>
       <td class="text-center"><span class="badge badge-success">Conciliado</span></td>
     </tr>
@@ -1000,7 +1003,8 @@
       <p class="section-desc">
         <strong>¿Por qué difieren los montos entre la Balanza y Odoo?</strong><br>
         En la Balanza contable original enviada por el cliente, los embarques de <em>Agrovet Market S.A</em> ($16.82M MXN) estaban clasificados en la cuenta <strong>115.05.02 (Mercancías en tránsito)</strong>. 
-        En cambio, en Odoo las facturas de compra de esos embarques (<code>BILL/2026/08/0001</code> y <code>0002</code>) se registraron afectando directamente la cuenta <strong>115.01.01 (Inventario en almacén)</strong>.
+        En cambio, en Odoo las facturas de compra de esos embarques (<code>BILL/2026/08/0001</code> y <code>0002</code>) se registraron afectando directamente la cuenta <strong>115.01.01 (Inventario en almacén)</strong>.<br>
+        <em>Nota técnica: En pruebas ya se corrió el script para reubicar los saldos a la cuenta puente <code>900.01.01 Saldos iniciales existencias</code> para dejar limpia la cuenta 115.01.01 para la póliza de apertura.</em>
       </p>
 
       <!-- Flow / Breakdown Comparison -->
@@ -1040,7 +1044,7 @@
 
           <div class="flow-card">
             <div class="flow-card-header" style="color: var(--vx-primary);">
-              <span>En el Sistema Odoo 19 (vetermex)</span>
+              <span>En el Sistema Odoo 19 (saldos-iniciales-julio)</span>
               <span>Total: $60,280,448.01</span>
             </div>
             <ul>
@@ -1102,8 +1106,8 @@
                 <strong>-$1,887,489.32</strong>
               </td>
               <td>
-                <a href="https://saldos-iniciales-julio.odoo.com/web#id=5&model=account.move&view_type=form" target="_blank" class="odoo-link">STJ/2026/09/0001 ($79,380.72)</a><br>
-                <a href="https://saldos-iniciales-julio.odoo.com/web#id=6&model=account.move&view_type=form" target="_blank" class="odoo-link">STJ/2026/09/0002 ($43,001,153.47)</a>
+                <a href="https://saldos-iniciales-julio.odoo.com/web#id=5&cids=1&menu_id=143&action=259&model=account.move&view_type=form" target="_blank" class="odoo-link">STJ/2026/09/0001 ($79,380.72)</a><br>
+                <a href="https://saldos-iniciales-julio.odoo.com/web#id=6&cids=1&menu_id=143&action=259&model=account.move&view_type=form" target="_blank" class="odoo-link">STJ/2026/09/0002 ($43,001,153.47)</a>
               </td>
               <td>
                 <span class="badge badge-warning">Diferencia en conteo físico</span><br>
@@ -1133,8 +1137,8 @@
                 <small class="text-muted">(Diferencia TC / +$572 USD)</small>
               </td>
               <td>
-                <a href="https://saldos-iniciales-julio.odoo.com/odoo/accounting/vendor-bills/30" target="_blank" class="odoo-link">BILL/2026/08/0001 ($6,028,471.72)</a><br>
-                <a href="https://saldos-iniciales-julio.odoo.com/odoo/accounting/vendor-bills/42" target="_blank" class="odoo-link">BILL/2026/08/0002 ($10,814,829.98)</a>
+                <a href="https://saldos-iniciales-julio.odoo.com/web#id=30&cids=1&menu_id=136&action=265&model=account.move&view_type=form" target="_blank" class="odoo-link">BILL/2026/08/0001 ($6,028,471.72)</a><br>
+                <a href="https://saldos-iniciales-julio.odoo.com/web#id=42&cids=1&menu_id=136&action=265&model=account.move&view_type=form" target="_blank" class="odoo-link">BILL/2026/08/0002 ($10,814,829.98)</a>
               </td>
               <td>
                 <span class="badge badge-info">Reclasificación de cuenta</span><br>
@@ -1163,7 +1167,7 @@
                 <strong>+$76,510.19</strong>
               </td>
               <td>
-                <a href="https://saldos-iniciales-julio.odoo.com/odoo/accounting/vendor-bills/26" target="_blank" class="odoo-link">BILL/2026/09/0001 Mare ($153,040.22)</a><br>
+                <a href="https://saldos-iniciales-julio.odoo.com/web#id=26&cids=1&menu_id=136&action=265&model=account.move&view_type=form" target="_blank" class="odoo-link">BILL/2026/09/0001 Mare ($153,040.22)</a><br>
                 <span class="text-muted">+ 10 facturas (Contecon, CIMA, SENASICA por $203,571.90)</span>
               </td>
               <td>
@@ -1209,8 +1213,9 @@
               <th>Proveedor / Concepto</th>
               <th class="text-right">Monto Balanza</th>
               <th class="text-center">Fila Drive</th>
-              <th>Plantilla Proveedor (Drive)</th>
-              <th>Facturas Registradas en Odoo</th>
+              <th class="text-right">Monto Neto en Odoo</th>
+              <th>Facturas y Parcialidades en Odoo (Pruebas)</th>
+              <th class="text-right">Diferencia (Odoo - Balanza)</th>
               <th class="text-center">Estatus</th>
             </tr>
           </thead>
@@ -1222,9 +1227,10 @@
       <td><strong>IMPRE-JAL</strong></td>
       <td class="text-right">$10,962.00</td>
       <td class="text-center"><a href="https://docs.google.com/spreadsheets/d/18rOH28VjAqJLih0DdWKO5jlNAoS41rxx/edit#gid=0&range=A354" target="_blank" class="drive-link">Fila 354 ↗</a></td>
-      <td><a href="https://docs.google.com/spreadsheets/d/1p947H9m8Dzdm7hbsydP4FMIsOifDP-aU/edit" target="_blank" class="drive-link">En Plantilla: $10,962.00 ↗</a></td>
-      <td><span class="text-muted">Sin factura en Odoo</span></td>
-      <td class="text-center"><span class="badge badge-warning">Pendiente Importar</span></td>
+      <td class="text-right">$10,962.00</td>
+      <td><a href="https://saldos-iniciales-julio.odoo.com/web#id=1099&cids=1&menu_id=136&action=265&model=account.move&view_type=form" target="_blank" class="odoo-link" title="FHP/2026/09/0006 (2026-09-30): $21,924.00">47649 ($21,924.00)</a>, <a href="https://saldos-iniciales-julio.odoo.com/web#id=1104&cids=1&menu_id=143&action=259&model=account.move&view_type=form" target="_blank" class="odoo-link partial-link" title="Parcialidades aplicadas: -$10,962.00">Parcialidad (-$10,962.00) ↗</a></td>
+      <td class="text-right text-success"><strong>$0.00</strong></td>
+      <td class="text-center"><span class="badge badge-success">Conciliado (FHP)</span></td>
     </tr>
     
     <tr>
@@ -1233,9 +1239,10 @@
       <td><strong>GRAFICOS IPUNTO</strong></td>
       <td class="text-right">$3,922.93</td>
       <td class="text-center"><a href="https://docs.google.com/spreadsheets/d/18rOH28VjAqJLih0DdWKO5jlNAoS41rxx/edit#gid=0&range=A355" target="_blank" class="drive-link">Fila 355 ↗</a></td>
-      <td><a href="https://docs.google.com/spreadsheets/d/1p947H9m8Dzdm7hbsydP4FMIsOifDP-aU/edit" target="_blank" class="drive-link">En Plantilla: $3,922.93 ↗</a></td>
-      <td><span class="text-muted">Sin factura en Odoo</span></td>
-      <td class="text-center"><span class="badge badge-warning">Pendiente Importar</span></td>
+      <td class="text-right">$3,922.93</td>
+      <td><a href="https://saldos-iniciales-julio.odoo.com/web#id=1102&cids=1&menu_id=136&action=265&model=account.move&view_type=form" target="_blank" class="odoo-link" title="FHP/2026/09/0009 (2026-09-30): $8,042.01">16421 ($8,042.01)</a>, <a href="https://saldos-iniciales-julio.odoo.com/web#id=1104&cids=1&menu_id=143&action=259&model=account.move&view_type=form" target="_blank" class="odoo-link partial-link" title="Parcialidades aplicadas: -$4,119.08">Parcialidad (-$4,119.08) ↗</a></td>
+      <td class="text-right text-success"><strong>$0.00</strong></td>
+      <td class="text-center"><span class="badge badge-success">Conciliado (FHP)</span></td>
     </tr>
     
     <tr>
@@ -1244,9 +1251,10 @@
       <td><strong>KOI REALIZA</strong></td>
       <td class="text-right">$401,082.23</td>
       <td class="text-center"><a href="https://docs.google.com/spreadsheets/d/18rOH28VjAqJLih0DdWKO5jlNAoS41rxx/edit#gid=0&range=A356" target="_blank" class="drive-link">Fila 356 ↗</a></td>
-      <td><a href="https://docs.google.com/spreadsheets/d/1p947H9m8Dzdm7hbsydP4FMIsOifDP-aU/edit" target="_blank" class="drive-link">En Plantilla: $401,082.00 ↗</a></td>
-      <td><span class="text-muted">Sin factura en Odoo</span></td>
-      <td class="text-center"><span class="badge badge-warning">Pendiente Importar</span></td>
+      <td class="text-right">$401,082.00</td>
+      <td><a href="https://saldos-iniciales-julio.odoo.com/web#id=1097&cids=1&menu_id=136&action=265&model=account.move&view_type=form" target="_blank" class="odoo-link" title="FHP/2026/09/0004 (2026-09-30): $901,082.00">0000414 ($901,082.00)</a>, <a href="https://saldos-iniciales-julio.odoo.com/web#id=1104&cids=1&menu_id=143&action=259&model=account.move&view_type=form" target="_blank" class="odoo-link partial-link" title="Parcialidades aplicadas: -$500,000.00">Parcialidad (-$500,000.00) ↗</a></td>
+      <td class="text-right text-warning"><strong>$-0.23</strong></td>
+      <td class="text-center"><span class="badge badge-info">Redondeo (< $1)</span></td>
     </tr>
     
     <tr>
@@ -1255,9 +1263,10 @@
       <td><strong>COMVACEN</strong></td>
       <td class="text-right">$31,320.00</td>
       <td class="text-center"><a href="https://docs.google.com/spreadsheets/d/18rOH28VjAqJLih0DdWKO5jlNAoS41rxx/edit#gid=0&range=A357" target="_blank" class="drive-link">Fila 357 ↗</a></td>
-      <td><a href="https://docs.google.com/spreadsheets/d/1p947H9m8Dzdm7hbsydP4FMIsOifDP-aU/edit" target="_blank" class="drive-link">En Plantilla: $31,320.00 ↗</a></td>
-      <td><span class="text-muted">Sin factura en Odoo</span></td>
-      <td class="text-center"><span class="badge badge-warning">Pendiente Importar</span></td>
+      <td class="text-right">$31,320.00</td>
+      <td><a href="https://saldos-iniciales-julio.odoo.com/web#id=1126&cids=1&menu_id=136&action=265&model=account.move&view_type=form" target="_blank" class="odoo-link" title="FHP/2026/09/0011 (2026-09-30): $62,640.00">182 ($62,640.00)</a>, <a href="https://saldos-iniciales-julio.odoo.com/web#id=1128&cids=1&menu_id=143&action=259&model=account.move&view_type=form" target="_blank" class="odoo-link partial-link" title="Parcialidades aplicadas: -$31,320.00">Parcialidad (-$31,320.00) ↗</a></td>
+      <td class="text-right text-success"><strong>$0.00</strong></td>
+      <td class="text-center"><span class="badge badge-success">Conciliado (FHP)</span></td>
     </tr>
     
     <tr>
@@ -1266,9 +1275,10 @@
       <td><strong>CONGRESS & MEETINGS GROUP</strong></td>
       <td class="text-right">$856,252.74</td>
       <td class="text-center"><a href="https://docs.google.com/spreadsheets/d/18rOH28VjAqJLih0DdWKO5jlNAoS41rxx/edit#gid=0&range=A358" target="_blank" class="drive-link">Fila 358 ↗</a></td>
-      <td><a href="https://docs.google.com/spreadsheets/d/1p947H9m8Dzdm7hbsydP4FMIsOifDP-aU/edit" target="_blank" class="drive-link">En Plantilla: $856,252.74 ↗</a></td>
-      <td><span class="text-muted">Sin factura en Odoo</span></td>
-      <td class="text-center"><span class="badge badge-warning">Pendiente Importar</span></td>
+      <td class="text-right">$710,547.56</td>
+      <td><a href="https://saldos-iniciales-julio.odoo.com/web#id=1095&cids=1&menu_id=136&action=265&model=account.move&view_type=form" target="_blank" class="odoo-link" title="FHP/2026/09/0002 (2026-09-30): $1,421,095.12">9518 ($1,421,095.12)</a>, <a href="https://saldos-iniciales-julio.odoo.com/web#id=1104&cids=1&menu_id=143&action=259&model=account.move&view_type=form" target="_blank" class="odoo-link partial-link" title="Parcialidades aplicadas: -$710,547.56">Parcialidad (-$710,547.56) ↗</a></td>
+      <td class="text-right text-danger"><strong>$-145,705.18</strong></td>
+      <td class="text-center"><span class="badge badge-info">Cargada con Dif</span></td>
     </tr>
     
     <tr>
@@ -1277,9 +1287,10 @@
       <td><strong>ODOO TECHNOLOGIES</strong></td>
       <td class="text-right">$74,323.89</td>
       <td class="text-center"><a href="https://docs.google.com/spreadsheets/d/18rOH28VjAqJLih0DdWKO5jlNAoS41rxx/edit#gid=0&range=A359" target="_blank" class="drive-link">Fila 359 ↗</a></td>
-      <td><a href="https://docs.google.com/spreadsheets/d/1p947H9m8Dzdm7hbsydP4FMIsOifDP-aU/edit" target="_blank" class="drive-link">En Plantilla: $74,323.89 ↗</a></td>
-      <td><span class="text-muted">Sin factura en Odoo</span></td>
-      <td class="text-center"><span class="badge badge-warning">Pendiente Importar</span></td>
+      <td class="text-right">$74,323.89</td>
+      <td><a href="https://saldos-iniciales-julio.odoo.com/web#id=1096&cids=1&menu_id=136&action=265&model=account.move&view_type=form" target="_blank" class="odoo-link" title="FHP/2026/09/0003 (2026-09-30): $148,647.78">INV/2026/09/10379 ($148,647.78)</a>, <a href="https://saldos-iniciales-julio.odoo.com/web#id=1104&cids=1&menu_id=143&action=259&model=account.move&view_type=form" target="_blank" class="odoo-link partial-link" title="Parcialidades aplicadas: -$74,323.89">Parcialidad (-$74,323.89) ↗</a></td>
+      <td class="text-right text-success"><strong>$0.00</strong></td>
+      <td class="text-center"><span class="badge badge-success">Conciliado (FHP)</span></td>
     </tr>
     
     <tr>
@@ -1288,9 +1299,10 @@
       <td><strong>QUALITAS COMPAÑIA DE SEGUROS</strong></td>
       <td class="text-right">$16,689.05</td>
       <td class="text-center"><a href="https://docs.google.com/spreadsheets/d/18rOH28VjAqJLih0DdWKO5jlNAoS41rxx/edit#gid=0&range=A360" target="_blank" class="drive-link">Fila 360 ↗</a></td>
-      <td><a href="https://docs.google.com/spreadsheets/d/1p947H9m8Dzdm7hbsydP4FMIsOifDP-aU/edit" target="_blank" class="drive-link">En Plantilla: $16,689.05 ↗</a></td>
-      <td><span class="text-muted">Sin factura en Odoo</span></td>
-      <td class="text-center"><span class="badge badge-warning">Pendiente Importar</span></td>
+      <td class="text-right">$16,689.05</td>
+      <td><a href="https://saldos-iniciales-julio.odoo.com/web#id=1101&cids=1&menu_id=136&action=265&model=account.move&view_type=form" target="_blank" class="odoo-link" title="FHP/2026/09/0008 (2026-09-30): $20,282.70">A188673201 ($20,282.70)</a>, <a href="https://saldos-iniciales-julio.odoo.com/web#id=1100&cids=1&menu_id=136&action=265&model=account.move&view_type=form" target="_blank" class="odoo-link" title="FHP/2026/09/0007 (2026-09-30): $14,646.35">A188673220 ($14,646.35)</a>, <a href="https://saldos-iniciales-julio.odoo.com/web#id=1104&cids=1&menu_id=143&action=259&model=account.move&view_type=form" target="_blank" class="odoo-link partial-link" title="Parcialidades aplicadas: -$18,240.00">Parcialidad (-$18,240.00) ↗</a></td>
+      <td class="text-right text-success"><strong>$0.00</strong></td>
+      <td class="text-center"><span class="badge badge-success">Conciliado (FHP)</span></td>
     </tr>
     
     <tr>
@@ -1299,9 +1311,10 @@
       <td><strong>ARTICULOS PROMOCIONALES CASA XAVIER</strong></td>
       <td class="text-right">$54,955.00</td>
       <td class="text-center"><a href="https://docs.google.com/spreadsheets/d/18rOH28VjAqJLih0DdWKO5jlNAoS41rxx/edit#gid=0&range=A361" target="_blank" class="drive-link">Fila 361 ↗</a></td>
-      <td><a href="https://docs.google.com/spreadsheets/d/1p947H9m8Dzdm7hbsydP4FMIsOifDP-aU/edit" target="_blank" class="drive-link">En Plantilla: $54,955.00 ↗</a></td>
-      <td><span class="text-muted">Sin factura en Odoo</span></td>
-      <td class="text-center"><span class="badge badge-warning">Pendiente Importar</span></td>
+      <td class="text-right">$54,955.00</td>
+      <td><a href="https://saldos-iniciales-julio.odoo.com/web#id=1103&cids=1&menu_id=136&action=265&model=account.move&view_type=form" target="_blank" class="odoo-link" title="FHP/2026/09/0010 (2026-09-30): $109,910.00">F57418 ($109,910.00)</a>, <a href="https://saldos-iniciales-julio.odoo.com/web#id=1104&cids=1&menu_id=143&action=259&model=account.move&view_type=form" target="_blank" class="odoo-link partial-link" title="Parcialidades aplicadas: -$54,955.00">Parcialidad (-$54,955.00) ↗</a></td>
+      <td class="text-right text-success"><strong>$0.00</strong></td>
+      <td class="text-center"><span class="badge badge-success">Conciliado (FHP)</span></td>
     </tr>
     
     <tr>
@@ -1310,9 +1323,10 @@
       <td><strong>UNIVERSIDAD TECNOLOGICA DE MEXICO</strong></td>
       <td class="text-right">$20,536.00</td>
       <td class="text-center"><a href="https://docs.google.com/spreadsheets/d/18rOH28VjAqJLih0DdWKO5jlNAoS41rxx/edit#gid=0&range=A362" target="_blank" class="drive-link">Fila 362 ↗</a></td>
-      <td><a href="https://docs.google.com/spreadsheets/d/1p947H9m8Dzdm7hbsydP4FMIsOifDP-aU/edit" target="_blank" class="drive-link">En Plantilla: $20,536.00 ↗</a></td>
-      <td><span class="text-muted">Sin factura en Odoo</span></td>
-      <td class="text-center"><span class="badge badge-warning">Pendiente Importar</span></td>
+      <td class="text-right">$20,536.00</td>
+      <td><a href="https://saldos-iniciales-julio.odoo.com/web#id=1127&cids=1&menu_id=136&action=265&model=account.move&view_type=form" target="_blank" class="odoo-link" title="FHP/2026/09/0012 (2026-09-30): $20,536.00">4C3F8CCF ($20,536.00)</a></td>
+      <td class="text-right text-success"><strong>$0.00</strong></td>
+      <td class="text-center"><span class="badge badge-success">Conciliado (FHP)</span></td>
     </tr>
     
     <tr>
@@ -1321,9 +1335,10 @@
       <td><strong>CARU CAPACITACION Y CONSULTORIA</strong></td>
       <td class="text-right">$5,420.91</td>
       <td class="text-center"><a href="https://docs.google.com/spreadsheets/d/18rOH28VjAqJLih0DdWKO5jlNAoS41rxx/edit#gid=0&range=A363" target="_blank" class="drive-link">Fila 363 ↗</a></td>
-      <td><a href="https://docs.google.com/spreadsheets/d/1p947H9m8Dzdm7hbsydP4FMIsOifDP-aU/edit" target="_blank" class="drive-link">En Plantilla: $5,420.91 ↗</a></td>
-      <td><span class="text-muted">Sin factura en Odoo</span></td>
-      <td class="text-center"><span class="badge badge-warning">Pendiente Importar</span></td>
+      <td class="text-right">$5,420.91</td>
+      <td><a href="https://saldos-iniciales-julio.odoo.com/web#id=1094&cids=1&menu_id=136&action=265&model=account.move&view_type=form" target="_blank" class="odoo-link" title="FHP/2026/09/0001 (2026-09-30): $19,604.00">A2722 ($19,604.00)</a>, <a href="https://saldos-iniciales-julio.odoo.com/web#id=1104&cids=1&menu_id=143&action=259&model=account.move&view_type=form" target="_blank" class="odoo-link partial-link" title="Parcialidades aplicadas: -$14,183.09">Parcialidad (-$14,183.09) ↗</a></td>
+      <td class="text-right text-success"><strong>$0.00</strong></td>
+      <td class="text-center"><span class="badge badge-success">Conciliado (FHP)</span></td>
     </tr>
     
     <tr>
@@ -1332,9 +1347,10 @@
       <td><strong>FREIGHTABLE</strong></td>
       <td class="text-right">$2,552.93</td>
       <td class="text-center"><a href="https://docs.google.com/spreadsheets/d/18rOH28VjAqJLih0DdWKO5jlNAoS41rxx/edit#gid=0&range=A364" target="_blank" class="drive-link">Fila 364 ↗</a></td>
-      <td><a href="https://docs.google.com/spreadsheets/d/1p947H9m8Dzdm7hbsydP4FMIsOifDP-aU/edit" target="_blank" class="drive-link">En Plantilla: $2,552.93 ↗</a></td>
-      <td><span class="text-muted">Sin factura en Odoo</span></td>
-      <td class="text-center"><span class="badge badge-warning">Pendiente Importar</span></td>
+      <td class="text-right">$2,552.93</td>
+      <td><a href="https://saldos-iniciales-julio.odoo.com/web#id=1098&cids=1&menu_id=136&action=265&model=account.move&view_type=form" target="_blank" class="odoo-link" title="FHP/2026/09/0005 (2026-09-30): $2,552.93">GDL4069153 ($2,552.93)</a></td>
+      <td class="text-right text-success"><strong>$0.00</strong></td>
+      <td class="text-center"><span class="badge badge-success">Conciliado (FHP)</span></td>
     </tr>
     
     <tr>
@@ -1343,9 +1359,10 @@
       <td><strong>CHUBB SEGUROS MEXICO</strong></td>
       <td class="text-right">$50,306.54</td>
       <td class="text-center"><a href="https://docs.google.com/spreadsheets/d/18rOH28VjAqJLih0DdWKO5jlNAoS41rxx/edit#gid=0&range=A365" target="_blank" class="drive-link">Fila 365 ↗</a></td>
-      <td><span class="text-muted">No en plantilla</span></td>
-      <td><span class="text-muted">Sin factura en Odoo</span></td>
-      <td class="text-center"><span class="badge badge-warning">Pendiente Importar</span></td>
+      <td class="text-right">$0.00</td>
+      <td><span class="text-muted">Sin registrar en Odoo</span></td>
+      <td class="text-right text-danger"><strong>$-50,306.54</strong></td>
+      <td class="text-center"><span class="badge badge-warning">No en Plantilla</span></td>
     </tr>
     
     <tr>
@@ -1354,9 +1371,10 @@
       <td><strong>Radiomovil Dipsa</strong></td>
       <td class="text-right">$-3,309.27</td>
       <td class="text-center"><a href="https://docs.google.com/spreadsheets/d/18rOH28VjAqJLih0DdWKO5jlNAoS41rxx/edit#gid=0&range=A366" target="_blank" class="drive-link">Fila 366 ↗</a></td>
-      <td><span class="text-muted">No en plantilla</span></td>
-      <td><span class="text-muted">Sin factura en Odoo</span></td>
-      <td class="text-center"><span class="badge badge-warning">Pendiente Importar</span></td>
+      <td class="text-right">$0.00</td>
+      <td><span class="text-muted">Sin registrar en Odoo</span></td>
+      <td class="text-right text-danger"><strong>$3,309.27</strong></td>
+      <td class="text-center"><span class="badge badge-warning">No en Plantilla</span></td>
     </tr>
     
     <tr>
@@ -1365,9 +1383,10 @@
       <td><strong>MANUEL DE JESUS GONZALEZ GOMEZ</strong></td>
       <td class="text-right">$-116.83</td>
       <td class="text-center"><a href="https://docs.google.com/spreadsheets/d/18rOH28VjAqJLih0DdWKO5jlNAoS41rxx/edit#gid=0&range=A367" target="_blank" class="drive-link">Fila 367 ↗</a></td>
-      <td><span class="text-muted">No en plantilla</span></td>
-      <td><span class="text-muted">Sin factura en Odoo</span></td>
-      <td class="text-center"><span class="badge badge-warning">Pendiente Importar</span></td>
+      <td class="text-right">$0.00</td>
+      <td><span class="text-muted">Sin registrar en Odoo</span></td>
+      <td class="text-right text-danger"><strong>$116.83</strong></td>
+      <td class="text-center"><span class="badge badge-warning">No en Plantilla</span></td>
     </tr>
     
     <tr>
@@ -1376,9 +1395,10 @@
       <td><strong>INSTITUTO DE ESPECIALIZACION PARA EJECUTIVOS SC</strong></td>
       <td class="text-right">$7,644.00</td>
       <td class="text-center"><a href="https://docs.google.com/spreadsheets/d/18rOH28VjAqJLih0DdWKO5jlNAoS41rxx/edit#gid=0&range=A368" target="_blank" class="drive-link">Fila 368 ↗</a></td>
-      <td><span class="text-muted">No en plantilla</span></td>
-      <td><span class="text-muted">Sin factura en Odoo</span></td>
-      <td class="text-center"><span class="badge badge-warning">Pendiente Importar</span></td>
+      <td class="text-right">$0.00</td>
+      <td><span class="text-muted">Sin registrar en Odoo</span></td>
+      <td class="text-right text-danger"><strong>$-7,644.00</strong></td>
+      <td class="text-center"><span class="badge badge-warning">No en Plantilla</span></td>
     </tr>
     
     <tr>
@@ -1387,9 +1407,10 @@
       <td><strong>MANUEL DE JESUS AGUERO RAMIREZ</strong></td>
       <td class="text-right">$2,576.15</td>
       <td class="text-center"><a href="https://docs.google.com/spreadsheets/d/18rOH28VjAqJLih0DdWKO5jlNAoS41rxx/edit#gid=0&range=A369" target="_blank" class="drive-link">Fila 369 ↗</a></td>
-      <td><span class="text-muted">No en plantilla</span></td>
-      <td><a href="https://saldos-iniciales-julio.odoo.com/odoo/accounting/vendor-bills/32" target="_blank" class="odoo-link">BILL/2026/10/0003 ($28,171.97)</a>, <a href="https://saldos-iniciales-julio.odoo.com/odoo/accounting/vendor-bills/40" target="_blank" class="odoo-link">BILL/2026/10/0006 ($46,205.55)</a></td>
-      <td class="text-center"><span class="badge badge-info">Cargada en Odoo</span></td>
+      <td class="text-right">$0.00</td>
+      <td><span class="text-muted">Sin registrar en Odoo</span></td>
+      <td class="text-right text-danger"><strong>$-2,576.15</strong></td>
+      <td class="text-center"><span class="badge badge-warning">No en Plantilla</span></td>
     </tr>
     
     <tr>
@@ -1398,9 +1419,10 @@
       <td><strong>INVERSIONES MONTECO</strong></td>
       <td class="text-right">$6,046,674.57</td>
       <td class="text-center"><a href="https://docs.google.com/spreadsheets/d/18rOH28VjAqJLih0DdWKO5jlNAoS41rxx/edit#gid=0&range=A370" target="_blank" class="drive-link">Fila 370 ↗</a></td>
-      <td><span class="text-muted">No en plantilla</span></td>
-      <td><span class="text-muted">Sin factura en Odoo</span></td>
-      <td class="text-center"><span class="badge badge-warning">Pendiente Importar</span></td>
+      <td class="text-right">$0.00</td>
+      <td><span class="text-muted">Sin registrar en Odoo</span></td>
+      <td class="text-right text-danger"><strong>$-6,046,674.57</strong></td>
+      <td class="text-center"><span class="badge badge-warning">No en Plantilla</span></td>
     </tr>
     
     <tr>
@@ -1409,9 +1431,10 @@
       <td><strong>Dolares US</strong></td>
       <td class="text-right">$53,815.90</td>
       <td class="text-center"><a href="https://docs.google.com/spreadsheets/d/18rOH28VjAqJLih0DdWKO5jlNAoS41rxx/edit#gid=0&range=A371" target="_blank" class="drive-link">Fila 371 ↗</a></td>
-      <td><span class="text-muted">No en plantilla</span></td>
-      <td><span class="text-muted">Sin factura en Odoo</span></td>
-      <td class="text-center"><span class="badge badge-warning">Pendiente Importar</span></td>
+      <td class="text-right">$0.00</td>
+      <td><span class="text-muted">Sin registrar en Odoo</span></td>
+      <td class="text-right text-danger"><strong>$-53,815.90</strong></td>
+      <td class="text-center"><span class="badge badge-warning">No en Plantilla</span></td>
     </tr>
     
     <tr>
@@ -1420,9 +1443,10 @@
       <td><strong>Complementaria MN MX</strong></td>
       <td class="text-right">$5,409,237.04</td>
       <td class="text-center"><a href="https://docs.google.com/spreadsheets/d/18rOH28VjAqJLih0DdWKO5jlNAoS41rxx/edit#gid=0&range=A372" target="_blank" class="drive-link">Fila 372 ↗</a></td>
-      <td><span class="text-muted">No en plantilla</span></td>
-      <td><span class="text-muted">Sin factura en Odoo</span></td>
-      <td class="text-center"><span class="badge badge-warning">Pendiente Importar</span></td>
+      <td class="text-right">$0.00</td>
+      <td><span class="text-muted">Sin registrar en Odoo</span></td>
+      <td class="text-right text-danger"><strong>$-5,409,237.04</strong></td>
+      <td class="text-center"><span class="badge badge-warning">No en Plantilla</span></td>
     </tr>
     
     <tr>
@@ -1431,9 +1455,10 @@
       <td><strong>AGROVET PESO (RC INVEN)</strong></td>
       <td class="text-right">$9,551,862.81</td>
       <td class="text-center"><a href="https://docs.google.com/spreadsheets/d/18rOH28VjAqJLih0DdWKO5jlNAoS41rxx/edit#gid=0&range=A373" target="_blank" class="drive-link">Fila 373 ↗</a></td>
-      <td><span class="text-muted">No en plantilla</span></td>
-      <td><span class="text-muted">Sin factura en Odoo</span></td>
-      <td class="text-center"><span class="badge badge-warning">Pendiente Importar</span></td>
+      <td class="text-right">$0.00</td>
+      <td><span class="text-muted">Sin registrar en Odoo</span></td>
+      <td class="text-right text-danger"><strong>$-9,551,862.81</strong></td>
+      <td class="text-center"><span class="badge badge-warning">No en Plantilla</span></td>
     </tr>
     
     <tr>
@@ -1442,9 +1467,10 @@
       <td><strong>Revetsa Animal Health</strong></td>
       <td class="text-right">$1,168,699.36</td>
       <td class="text-center"><a href="https://docs.google.com/spreadsheets/d/18rOH28VjAqJLih0DdWKO5jlNAoS41rxx/edit#gid=0&range=A374" target="_blank" class="drive-link">Fila 374 ↗</a></td>
-      <td><span class="text-muted">No en plantilla</span></td>
-      <td><span class="text-muted">Sin factura en Odoo</span></td>
-      <td class="text-center"><span class="badge badge-warning">Pendiente Importar</span></td>
+      <td class="text-right">$0.00</td>
+      <td><span class="text-muted">Sin registrar en Odoo</span></td>
+      <td class="text-right text-danger"><strong>$-1,168,699.36</strong></td>
+      <td class="text-center"><span class="badge badge-warning">No en Plantilla</span></td>
     </tr>
     
     <tr>
@@ -1453,9 +1479,10 @@
       <td><strong>Agrovet Market S.A</strong></td>
       <td class="text-right">$26,888,157.72</td>
       <td class="text-center"><a href="https://docs.google.com/spreadsheets/d/18rOH28VjAqJLih0DdWKO5jlNAoS41rxx/edit#gid=0&range=A375" target="_blank" class="drive-link">Fila 375 ↗</a></td>
-      <td><span class="text-muted">No en plantilla</span></td>
-      <td><a href="https://saldos-iniciales-julio.odoo.com/odoo/accounting/vendor-bills/30" target="_blank" class="odoo-link">BILL/2026/08/0001 ($355,746.00)</a>, <a href="https://saldos-iniciales-julio.odoo.com/odoo/accounting/vendor-bills/42" target="_blank" class="odoo-link">BILL/2026/08/0002 ($637,490.20)</a></td>
-      <td class="text-center"><span class="badge badge-info">Cargada en Odoo</span></td>
+      <td class="text-right">$993,236.20</td>
+      <td><a href="https://saldos-iniciales-julio.odoo.com/web#id=42&cids=1&menu_id=136&action=265&model=account.move&view_type=form" target="_blank" class="odoo-link" title="BILL/2026/08/0002 (2026-08-31): $637,490.20">BILL/2026/08/0002 ($637,490.20)</a>, <a href="https://saldos-iniciales-julio.odoo.com/web#id=30&cids=1&menu_id=136&action=265&model=account.move&view_type=form" target="_blank" class="odoo-link" title="BILL/2026/08/0001 (2026-08-31): $355,746.00">BILL/2026/08/0001 ($355,746.00)</a></td>
+      <td class="text-right text-danger"><strong>$-25,894,921.52</strong></td>
+      <td class="text-center"><span class="badge badge-info">Cargada con Dif</span></td>
     </tr>
     
     <tr>
@@ -1464,9 +1491,10 @@
       <td><strong>MARE CONNECTING INTERNACIONAL</strong></td>
       <td class="text-right">$44,064.35</td>
       <td class="text-center"><a href="https://docs.google.com/spreadsheets/d/18rOH28VjAqJLih0DdWKO5jlNAoS41rxx/edit#gid=0&range=A376" target="_blank" class="drive-link">Fila 376 ↗</a></td>
-      <td><span class="text-muted">No en plantilla</span></td>
-      <td><a href="https://saldos-iniciales-julio.odoo.com/odoo/accounting/vendor-bills/26" target="_blank" class="odoo-link">BILL/2026/09/0001 ($9,015.36)</a>, <a href="https://saldos-iniciales-julio.odoo.com/odoo/accounting/vendor-bills/28" target="_blank" class="odoo-link">BILL/2026/10/0001 ($928.00)</a>, <a href="https://saldos-iniciales-julio.odoo.com/odoo/accounting/vendor-bills/29" target="_blank" class="odoo-link">BILL/2026/10/0002 ($123,424.00)</a></td>
-      <td class="text-center"><span class="badge badge-info">Cargada en Odoo</span></td>
+      <td class="text-right">$9,015.36</td>
+      <td><a href="https://saldos-iniciales-julio.odoo.com/web#id=26&cids=1&menu_id=136&action=265&model=account.move&view_type=form" target="_blank" class="odoo-link" title="BILL/2026/09/0001 (2026-09-30): $9,015.36">BILL/2026/09/0001 ($9,015.36)</a></td>
+      <td class="text-right text-danger"><strong>$-35,048.99</strong></td>
+      <td class="text-center"><span class="badge badge-info">Cargada con Dif</span></td>
     </tr>
     
           </tbody>
@@ -1475,9 +1503,10 @@
               <td colspan="3">TOTAL CUENTAS POR PAGAR (201.xx)</td>
               <td class="text-right">$50,697,630.02</td>
               <td></td>
-              <td>Plantilla Proveedor: $1,478,016.71</td>
-              <td>Facturas Agrovet + Landed Costs cargados</td>
-              <td class="text-center">Pendiente Cargar Gastos Nac.</td>
+              <td class="text-right">$2,334,563.83</td>
+              <td>12 facturas FHP + facturas de importación Agrovet y gastos aduanales</td>
+              <td class="text-right text-danger">$-48,363,066.19</td>
+              <td class="text-center">10 Proveedores Conciliados al 100%</td>
             </tr>
           </tfoot>
         </table>
