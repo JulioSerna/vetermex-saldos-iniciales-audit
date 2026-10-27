@@ -217,6 +217,70 @@
       margin-bottom: 16px;
     }
 
+    /* Flow / Breakdown Box */
+    .flow-container {
+      background: #F8FAFC;
+      border: 1px solid var(--vx-border);
+      border-radius: 8px;
+      padding: 18px;
+      margin-bottom: 20px;
+    }
+
+    .flow-title {
+      font-family: 'Sora', sans-serif;
+      font-weight: 600;
+      font-size: 14px;
+      color: var(--vx-neutral-dark);
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .flow-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 16px;
+    }
+
+    .flow-card {
+      background: #FFF;
+      border: 1px solid #D5DCE0;
+      border-radius: 6px;
+      padding: 14px;
+    }
+
+    .flow-card-header {
+      font-weight: 700;
+      font-size: 13px;
+      margin-bottom: 8px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-bottom: 6px;
+      border-bottom: 1px solid #EBEFF2;
+    }
+
+    .flow-card ul {
+      list-style: none;
+      font-size: 12.5px;
+    }
+
+    .flow-card li {
+      padding: 4px 0;
+      display: flex;
+      justify-content: space-between;
+      border-bottom: 1px dashed #F0F2F5;
+    }
+
+    .flow-card li:last-child {
+      border-bottom: none;
+      font-weight: 700;
+      padding-top: 8px;
+      margin-top: 4px;
+      border-top: 1px solid #D5DCE0;
+    }
+
     /* Table Styling */
     .table-responsive {
       overflow-x: auto;
@@ -450,9 +514,9 @@
         <div class="kpi-subtext">Balanza: $14,882,906.95 | Dif: <strong>+$133.10</strong> (28/37 clientes 100% conciliados)</div>
       </div>
       <div class="kpi-card kpi-inv">
-        <div class="kpi-label">Inventario Físico (115.01.01)</div>
+        <div class="kpi-label">Inventario Físico en Stock (115.01.01)</div>
         <div class="kpi-value">$43,080,534.19</div>
-        <div class="kpi-subtext">Balanza: $44,968,023.51 | Dif Stock: <strong>-$1,887,489.32</strong> (105 productos con lote)</div>
+        <div class="kpi-subtext">Balanza: $44,968,023.51 | Dif Stock Físico: <strong>-$1,887,489.32</strong> (105 productos con lote)</div>
       </div>
       <div class="kpi-card kpi-cxp">
         <div class="kpi-label">Proveedores Nacionales (201.01.01)</div>
@@ -468,7 +532,7 @@
 
     <!-- Alert Box -->
     <div class="alert-box">
-      <strong>Guía de navegación del reporte:</strong> Los botones verdes <span class="badge" style="background:#E6F4EA; color:#0D652D;">Fila X ↗</span> abren directamente la fila correspondiente en la hoja de cálculo de Google Drive. Los botones rosas <span class="badge" style="background:#FFF0F4; color:#AC0340;">FHV/...</span> abren la factura original o póliza contable dentro de Odoo.
+      <strong>Guía de navegación del reporte:</strong> Los botones verdes <span class="badge" style="background:#E6F4EA; color:#0D652D;">Fila X ↗</span> abren directamente la fila correspondiente en la hoja de cálculo de Google Drive. Los botones rosas <span class="badge" style="background:#FFF0F4; color:#AC0340;">FHV/...</span>, <span class="badge" style="background:#FFF0F4; color:#AC0340;">BILL/...</span> o <span class="badge" style="background:#FFF0F4; color:#AC0340;">STJ/...</span> abren la factura original o póliza contable dentro de Odoo.
     </div>
 
     <!-- SECTION 1: CUENTAS POR COBRAR (CXC) -->
@@ -933,71 +997,191 @@
           <a href="https://docs.google.com/spreadsheets/d/18rOH28VjAqJLih0DdWKO5jlNAoS41rxx/edit" target="_blank" class="drive-link">Abrir Póliza de Apertura (Drive) ↗</a>
         </div>
       </div>
-      <p class="section-desc">Cruce entre la valuación de existencias por lotes, las recepciones de compra de Agrovet Market (P00002 / P00003) y los costos en tránsito aduanales.</p>
+      <p class="section-desc">
+        <strong>¿Por qué difieren los montos entre la Balanza y Odoo?</strong><br>
+        En la Balanza contable original enviada por el cliente, los embarques de <em>Agrovet Market S.A</em> ($16.82M MXN) estaban clasificados en la cuenta <strong>115.05.02 (Mercancías en tránsito)</strong>. 
+        En cambio, en Odoo las facturas de compra de esos embarques (<code>BILL/2026/08/0001</code> y <code>0002</code>) se registraron afectando directamente la cuenta <strong>115.01.01 (Inventario en almacén)</strong>.
+      </p>
+
+      <!-- Flow / Breakdown Comparison -->
+      <div class="flow-container">
+        <div class="flow-title">
+          🔍 Desglose Comparativo de la Valuación Total de Inventario y Tránsito
+        </div>
+        <div class="flow-grid">
+          <div class="flow-card">
+            <div class="flow-card-header" style="color: #0D652D;">
+              <span>En la Balanza Excel (Drive)</span>
+              <span>Total: $62,076,909.67</span>
+            </div>
+            <ul>
+              <li>
+                <span>[115.01.01] Inventario Físico en Almacén:</span>
+                <span>$44,968,023.51</span>
+              </li>
+              <li>
+                <span>[115.05.02] Embarques Agrovet en Tránsito ($992,663.80 USD):</span>
+                <span>$16,828,784.23</span>
+              </li>
+              <li>
+                <span>[115.05.03] Tránsito Mare Connecting ($8,373.24 USD):</span>
+                <span>$142,139.93</span>
+              </li>
+              <li>
+                <span>[115.05.04] Gastos Aduanales Tránsito (Pesos):</span>
+                <span>$137,962.00</span>
+              </li>
+              <li>
+                <span>TOTAL VALUACIÓN GRUPO 115:</span>
+                <span>$62,076,909.67</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="flow-card">
+            <div class="flow-card-header" style="color: var(--vx-primary);">
+              <span>En el Sistema Odoo 19 (vetermex)</span>
+              <span>Total: $60,280,448.01</span>
+            </div>
+            <ul>
+              <li>
+                <span>[115.01.01] Ajuste Stock Físico (105 productos con lote):</span>
+                <span>$43,080,534.19</span>
+              </li>
+              <li>
+                <span>[115.01.01] Facturas Compras Agrovet (P00002/P00003):</span>
+                <span>$16,843,301.70</span>
+              </li>
+              <li>
+                <span>[115.05.01] Facturas Gastos Aduanales (Landed Costs):</span>
+                <span>$356,612.12</span>
+              </li>
+              <li>
+                <span class="text-muted">Total contabilizado en Cta 115.01.01 en Odoo:</span>
+                <span class="text-muted">$59,923,835.89</span>
+              </li>
+              <li>
+                <span>TOTAL VALUACIÓN GRUPO 115:</span>
+                <span>$60,280,448.01</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
 
       <div class="table-responsive">
         <table>
           <thead>
             <tr>
               <th class="text-center">#</th>
-              <th>Cuenta</th>
-              <th>Descripción en Balanza</th>
-              <th class="text-right">Monto Balanza</th>
+              <th>Concepto / Cuenta</th>
+              <th class="text-right">Monto en Balanza Excel</th>
               <th class="text-center">Fila Drive</th>
-              <th>Comprobación / Asientos en Odoo</th>
-              <th class="text-center">Diagnóstico</th>
+              <th class="text-right">Monto en Odoo (al 30/09)</th>
+              <th class="text-right">Diferencia (Odoo - Balanza)</th>
+              <th>Documentos y Comprobantes en Odoo</th>
+              <th class="text-center">Explicación de la Diferencia</th>
             </tr>
           </thead>
           <tbody>
-            
-    <tr>
-      <td class="text-center">1</td>
-      <td><code>115.01.01</code></td>
-      <td><strong>Inventario</strong></td>
-      <td class="text-right">$44,968,023.51</td>
-      <td class="text-center"><a href="https://docs.google.com/spreadsheets/d/18rOH28VjAqJLih0DdWKO5jlNAoS41rxx/edit#gid=0&range=A55" target="_blank" class="drive-link">Fila 55 ↗</a></td>
-      <td><strong>Total Odoo: $59,923,835.89</strong><br>Ajustes: <a href="https://vetermex.odoo.com/web#id=5&model=account.move&view_type=form" target="_blank" class="odoo-link">STJ/2026/09/0001 ($79,380.72)</a>, <a href="https://vetermex.odoo.com/web#id=6&model=account.move&view_type=form" target="_blank" class="odoo-link">STJ/2026/09/0002 ($43,001,153.47)</a><br>Compras Agrovet: <a href="https://vetermex.odoo.com/odoo/accounting/vendor-bills/30" target="_blank" class="odoo-link">BILL/2026/08/0001 ($6,028,471.72)</a>, <a href="https://vetermex.odoo.com/odoo/accounting/vendor-bills/42" target="_blank" class="odoo-link">BILL/2026/08/0002 ($10,814,829.98)</a></td>
-      <td class="text-center"><span class="badge badge-warning">Ajuste $43.08M vs Balanza $44.96M</span></td>
-    </tr>
-    
-    <tr>
-      <td class="text-center">2</td>
-      <td><code>115.05.02</code></td>
-      <td><strong>Mercancías en tránsito importación</strong></td>
-      <td class="text-right">$16,828,784.23</td>
-      <td class="text-center"><a href="https://docs.google.com/spreadsheets/d/18rOH28VjAqJLih0DdWKO5jlNAoS41rxx/edit#gid=0&range=A95" target="_blank" class="drive-link">Fila 95 ↗</a></td>
-      <td>En Odoo imputado directo a 115.01.01:<br><a href="https://vetermex.odoo.com/odoo/accounting/vendor-bills/30" target="_blank" class="odoo-link">BILL/2026/08/0001 ($6,028,471.72)</a>, <a href="https://vetermex.odoo.com/odoo/accounting/vendor-bills/42" target="_blank" class="odoo-link">BILL/2026/08/0002 ($10,814,829.98)</a> (Total: $16,843,301.70)</td>
-      <td class="text-center"><span class="badge badge-info">Contabilizado en Inventario</span></td>
-    </tr>
-    
-    <tr>
-      <td class="text-center">3</td>
-      <td><code>115.05.03</code></td>
-      <td><strong>Mercancías en tránsito nacional</strong></td>
-      <td class="text-right">$142,139.93</td>
-      <td class="text-center"><a href="https://docs.google.com/spreadsheets/d/18rOH28VjAqJLih0DdWKO5jlNAoS41rxx/edit#gid=0&range=A96" target="_blank" class="drive-link">Fila 96 ↗</a></td>
-      <td>En Odoo en 115.05.01:<br><a href="https://vetermex.odoo.com/odoo/accounting/vendor-bills/26" target="_blank" class="odoo-link">BILL/2026/09/0001 Mare ($142,139.94 base)</a></td>
-      <td class="text-center"><span class="badge badge-success">Cuadra con BILL/2026/09/0001</span></td>
-    </tr>
-    
-    <tr>
-      <td class="text-center">4</td>
-      <td><code>115.05.04</code></td>
-      <td><strong>Otras mercancías en tránsito</strong></td>
-      <td class="text-right">$137,962.00</td>
-      <td class="text-center"><a href="https://docs.google.com/spreadsheets/d/18rOH28VjAqJLih0DdWKO5jlNAoS41rxx/edit#gid=0&range=A97" target="_blank" class="drive-link">Fila 97 ↗</a></td>
-      <td>En Odoo en 115.05.01 (Contecon, CIMA, SENASICA por $214,472.18 al 30/09)</td>
-      <td class="text-center"><span class="badge badge-info">Gastos aduanales</span></td>
-    </tr>
-    
+            <tr>
+              <td class="text-center">1</td>
+              <td>
+                <strong>Inventario Físico en Almacén</strong><br>
+                <code>115.01.01 Inventario</code>
+              </td>
+              <td class="text-right">$44,968,023.51</td>
+              <td class="text-center">
+                <a href="https://docs.google.com/spreadsheets/d/18rOH28VjAqJLih0DdWKO5jlNAoS41rxx/edit#gid=0&range=A55" target="_blank" class="drive-link">Fila 55 ↗</a>
+              </td>
+              <td class="text-right">
+                <strong>$43,080,534.19</strong><br>
+                <small class="text-muted">(Ajuste existencias)</small>
+              </td>
+              <td class="text-right text-danger">
+                <strong>-$1,887,489.32</strong>
+              </td>
+              <td>
+                <a href="https://vetermex.odoo.com/web#id=5&model=account.move&view_type=form" target="_blank" class="odoo-link">STJ/2026/09/0001 ($79,380.72)</a><br>
+                <a href="https://vetermex.odoo.com/web#id=6&model=account.move&view_type=form" target="_blank" class="odoo-link">STJ/2026/09/0002 ($43,001,153.47)</a>
+              </td>
+              <td>
+                <span class="badge badge-warning">Diferencia en conteo físico</span><br>
+                <small>El archivo <code>inventory.xlsx</code> con 105 productos y lotes auditados valúa en $43,080,534.19 contra $44,968,023.51 de la balanza contable.</small>
+              </td>
+            </tr>
+
+            <tr>
+              <td class="text-center">2</td>
+              <td>
+                <strong>Compras de Importación Agrovet</strong><br>
+                <code>115.05.02 (Balanza) vs 115.01.01 (Odoo)</code>
+              </td>
+              <td class="text-right">
+                $16,828,784.23<br>
+                <small class="text-muted">($992,663.80 USD)</small>
+              </td>
+              <td class="text-center">
+                <a href="https://docs.google.com/spreadsheets/d/18rOH28VjAqJLih0DdWKO5jlNAoS41rxx/edit#gid=0&range=A95" target="_blank" class="drive-link">Fila 95 ↗</a>
+              </td>
+              <td class="text-right">
+                <strong>$16,843,301.70</strong><br>
+                <small class="text-muted">($993,236.20 USD)</small>
+              </td>
+              <td class="text-right text-success">
+                <strong>+$14,517.47</strong><br>
+                <small class="text-muted">(Diferencia TC / +$572 USD)</small>
+              </td>
+              <td>
+                <a href="https://vetermex.odoo.com/odoo/accounting/vendor-bills/30" target="_blank" class="odoo-link">BILL/2026/08/0001 ($6,028,471.72)</a><br>
+                <a href="https://vetermex.odoo.com/odoo/accounting/vendor-bills/42" target="_blank" class="odoo-link">BILL/2026/08/0002 ($10,814,829.98)</a>
+              </td>
+              <td>
+                <span class="badge badge-info">Reclasificación de cuenta</span><br>
+                <small>En la balanza del cliente estaba en Tránsito (115.05.02); en Odoo se registró afectando directo a Inventario (115.01.01).</small>
+              </td>
+            </tr>
+
+            <tr>
+              <td class="text-center">3</td>
+              <td>
+                <strong>Gastos Aduanales en Tránsito (USD y MXN)</strong><br>
+                <code>115.05.03/04 (Balanza) vs 115.05.01 (Odoo)</code>
+              </td>
+              <td class="text-right">
+                $280,101.93<br>
+                <small class="text-muted">($142.1K Mare + $137.9K Gastos)</small>
+              </td>
+              <td class="text-center">
+                <a href="https://docs.google.com/spreadsheets/d/18rOH28VjAqJLih0DdWKO5jlNAoS41rxx/edit#gid=0&range=A96" target="_blank" class="drive-link">Filas 96-97 ↗</a>
+              </td>
+              <td class="text-right">
+                <strong>$356,612.12</strong><br>
+                <small class="text-muted">(11 facturas Landed Costs)</small>
+              </td>
+              <td class="text-right text-warning">
+                <strong>+$76,510.19</strong>
+              </td>
+              <td>
+                <a href="https://vetermex.odoo.com/odoo/accounting/vendor-bills/26" target="_blank" class="odoo-link">BILL/2026/09/0001 Mare ($153,040.22)</a><br>
+                <span class="text-muted">+ 10 facturas (Contecon, CIMA, SENASICA por $203,571.90)</span>
+              </td>
+              <td>
+                <span class="badge badge-info">Gastos aduanales</span><br>
+                <small>Odoo incluye las facturas de fletes y maniobras que amparan los pedimentos aduanales de agosto y septiembre.</small>
+              </td>
+            </tr>
           </tbody>
           <tfoot>
             <tr style="background: #F1F4F6; font-weight: bold;">
-              <td colspan="3">TOTAL GRUPO 115 (INVENTARIO + TRÁNSITO)</td>
+              <td colspan="2">TOTAL GRUPO 115 (INVENTARIO + TRÁNSITO)</td>
               <td class="text-right">$62,076,909.67</td>
               <td></td>
-              <td>Total Odoo al 30/09: $60,280,448.01</td>
-              <td class="text-center">Diferencia Neta Grupo: -$1,796,461.66</td>
+              <td class="text-right">$60,280,448.01</td>
+              <td class="text-right text-danger">-$1,796,461.66</td>
+              <td colspan="2">
+                <strong>Conclusión:</strong> El stock físico auditado tiene una diferencia de <strong>-$1,887,489.32</strong> contra la balanza. Los otros $16.84M de Agrovet ya están en Odoo pero registrados en la cuenta de Inventario.
+              </td>
             </tr>
           </tfoot>
         </table>
