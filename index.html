@@ -489,14 +489,14 @@
       <!-- Inventario KPI -->
       <div class="kpi-card warning-h">
         <div class="kpi-header">
-          <span class="kpi-title">Inventarios y Tránsito (115.xx)</span>
-          <span class="badge badge-success">Cuentas Reclasificadas</span>
+          <span class="kpi-title">Inventarios (Cuenta 115.01.01)</span>
+          <span class="badge badge-info">Valoración Stock</span>
         </div>
-        <div class="kpi-amount">$0.00 MXN</div>
-        <div class="kpi-subtext">Saldo en 115.01.01 tras reubicar a cuenta 900.01.01</div>
+        <div class="kpi-amount">$43,080,534.19 MXN</div>
+        <div class="kpi-subtext">Total en Contabilidad Odoo (STJ/2026/09/0001 y 0002)</div>
         <div class="kpi-diff">
-          <span>Valuación Stock (inventory.xlsx): <strong>$43,080,534.19</strong></span>
-          <span class="text-muted">Balanza: $44,968,023.51</span>
+          <span>Balanza Excel: <strong>$44,968,023.51 MXN</strong></span>
+          <span class="text-danger"><strong>-$1,887,489.32 MXN</strong></span>
         </div>
       </div>
     </div>
@@ -1333,34 +1333,39 @@
           </thead>
           <tbody>
             <tr>
-              <td><strong>Valuación Física de Stock Almacén</strong><br><small class="text-muted">Cuenta 115.01.01 Inventario General</small></td>
+              <td><strong>115.01.01 Inventario (Valoración de Stock)</strong><br><small class="text-muted">Pólizas de Valoración STJ/2026/09/0001 y 0002</small></td>
               <td class="text-right">$44,968,023.51</td>
               <td><a href="https://docs.google.com/spreadsheets/d/18rOH28VjAqJLih0DdWKO5jlNAoS41rxx/edit#gid=0&range=A37" target="_blank" class="drive-link">Fila 37 ↗</a></td>
               <td class="text-right">$43,080,534.19</td>
-              <td><a href="https://saldos-iniciales-julio.odoo.com/odoo/accounting/entries/185" target="_blank" class="odoo-link partial-link">STJ/2026/09/0002 ↗</a></td>
+              <td>
+                <a href="https://saldos-iniciales-julio.odoo.com/odoo/accounting/entries/5" target="_blank" class="odoo-link partial-link">STJ/2026/09/0001 ($79,380.72) ↗</a>,
+                <a href="https://saldos-iniciales-julio.odoo.com/odoo/accounting/entries/6" target="_blank" class="odoo-link partial-link">STJ/2026/09/0002 ($43,001,153.47) ↗</a>
+              </td>
               <td class="text-right text-danger"><strong>-$1,887,489.32</strong></td>
-              <td>Diferencia entre el conteo físico en <code>inventory.xlsx</code> ($43.08M) y la balanza ($44.96M).</td>
+              <td>Las pólizas de valoración de inventario se mantienen en <code>115.01.01</code> ($43,080,534.19 MXN vs $44,968,023.51 MXN en balanza).</td>
             </tr>
             <tr>
-              <td><strong>Embarques Agrovet en Tránsito (BILL 0001 y 0002)</strong><br><small class="text-muted">Cuenta 115.05.02 Mercancías en Tránsito</small></td>
+              <td><strong>Facturas de Proveedor Reclasificadas a 900.01.01</strong><br><small class="text-muted">BILL/2026/08/0001 y BILL/2026/08/0002 (Agrovet)</small></td>
               <td class="text-right">$16,843,301.70</td>
               <td><a href="https://docs.google.com/spreadsheets/d/18rOH28VjAqJLih0DdWKO5jlNAoS41rxx/edit#gid=0&range=A38" target="_blank" class="drive-link">Fila 38 ↗</a></td>
               <td class="text-right">$16,843,301.70</td>
               <td>
-                <a href="https://saldos-iniciales-julio.odoo.com/odoo/accounting/vendor-bills/30" target="_blank" class="odoo-link">BILL 0001 ($6.02M)</a>, 
-                <a href="https://saldos-iniciales-julio.odoo.com/odoo/accounting/vendor-bills/42" target="_blank" class="odoo-link">BILL 0002 ($10.81M)</a>
+                <a href="https://saldos-iniciales-julio.odoo.com/odoo/accounting/vendor-bills/30" target="_blank" class="odoo-link">BILL/2026/08/0001 ($6,028,471.72)</a>, 
+                <a href="https://saldos-iniciales-julio.odoo.com/odoo/accounting/vendor-bills/42" target="_blank" class="odoo-link">BILL/2026/08/0002 ($10,814,829.98)</a>
               </td>
               <td class="text-right text-success"><strong>$0.00</strong></td>
-              <td><strong>Cuadra al centavo en MXN:</strong> $993,236.20 USD al tipo de cambio histórico registrado.</td>
+              <td><strong>41 apuntes de facturas de proveedor</strong> reclasificados de <code>115.01.01</code> a <code>900.01.01 Saldos iniciales existencias</code>.</td>
             </tr>
             <tr>
-              <td><strong>Reclasificación a Cuenta Puente</strong><br><small class="text-muted">Cuenta 900.01.01 Saldos Iniciales Existencias</small></td>
-              <td class="text-right">—</td>
+              <td><strong>115.05.01 Mercancías en Tránsito (Gastos Aduanales / Fletes)</strong><br><small class="text-muted">Facturas BILL/2026/09/0001 a 0011</small></td>
+              <td class="text-right">$0.00</td>
               <td class="text-center">—</td>
-              <td class="text-right">$59,923,835.89</td>
-              <td><span class="badge badge-success">229 Apuntes Reclasificados</span></td>
-              <td class="text-right text-success"><strong>Cuenta 115 en $0.00</strong></td>
-              <td>Todos los apuntes previos al 30/09 se movieron a la cuenta puente para evitar duplicidad al cargar la póliza.</td>
+              <td class="text-right">$356,612.12</td>
+              <td>
+                <a href="https://saldos-iniciales-julio.odoo.com/odoo/accounting/vendor-bills/26" target="_blank" class="odoo-link">BILL/2026/09/0001 a 0011</a>
+              </td>
+              <td class="text-right text-danger"><strong>+$356,612.12</strong></td>
+              <td>Gastos de importación (Mare Connecting, Contecon, Cima, SADER) registrados en <code>115.05.01</code> al 30/09/2026.</td>
             </tr>
           </tbody>
         </table>
