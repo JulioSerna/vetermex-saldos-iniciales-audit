@@ -1404,7 +1404,7 @@
                 <a href="https://saldos-iniciales-julio.odoo.com/odoo/accounting/entries/6" target="_blank" class="odoo-link partial-link">STJ/2026/09/0002 ($43,001,153.47) ↗</a>
               </td>
               <td class="text-right text-danger"><strong>-$1,887,489.32</strong></td>
-              <td>Las pólizas de valoración de inventario se mantienen en <code>115.01.01</code> ($43,080,534.19 MXN vs $44,968,023.51 MXN en balanza).</td>
+              <td>Las pólizas de valoración física de inventario inicial imputan a <code>115.01.01</code> con contrapartida en la cuenta puente <code>900.01.01</code> ($43,080,534.19 MXN vs $44,968,023.51 MXN en balanza).</td>
             </tr>
             <tr>
               <td><strong>115.05.02 Mercancías en tránsito importación</strong><br><small class="text-muted">Embarques Agrovet Market S.A ($992,663.80 USD)</small></td>
@@ -1412,11 +1412,11 @@
               <td><a href="https://docs.google.com/spreadsheets/d/18rOH28VjAqJLih0DdWKO5jlNAoS41rxx/edit#gid=0&range=A38" target="_blank" class="drive-link">Fila 38 ↗</a></td>
               <td class="text-right">$16,843,301.70</td>
               <td>
-                <a href="https://saldos-iniciales-julio.odoo.com/odoo/accounting/vendor-bills/30" target="_blank" class="odoo-link">BILL/2026/08/0001 ($6,028,471.72)</a>, 
-                <a href="https://saldos-iniciales-julio.odoo.com/odoo/accounting/vendor-bills/42" target="_blank" class="odoo-link">BILL/2026/08/0002 ($10,814,829.98)</a>
+                <a href="https://saldos-iniciales-julio.odoo.com/odoo/accounting/vendor-bills/30" target="_blank" class="odoo-link">BILL/2026/08/0001 ($6,028,471.72) ↗</a>, 
+                <a href="https://saldos-iniciales-julio.odoo.com/odoo/accounting/vendor-bills/42" target="_blank" class="odoo-link">BILL/2026/08/0002 ($10,814,829.98) ↗</a>
               </td>
               <td class="text-right text-warning"><strong>+$14,517.47</strong></td>
-              <td>Facturas de mercancía en tránsito de Agrovet ingresadas físicamente a almacén en octubre. La variación de $14.5K MXN corresponde al tipo de cambio.</td>
+              <td>Facturas de mercancía en tránsito de Agrovet recibidas físicamente en almacén en octubre. Sus líneas se registraron en <code>900.01.03 cxp saldos iniciales</code> (respetando la regla de que las facturas no imputan a existencias). Variación por tipo de cambio.</td>
             </tr>
             <tr>
               <td><strong>115.05.03 Mercancías en tránsito nacional</strong><br><small class="text-muted">Gastos de Importación USD (Mare Connecting, $8,373.24 USD)</small></td>
@@ -1427,7 +1427,7 @@
                 <a href="https://saldos-iniciales-julio.odoo.com/odoo/accounting/vendor-bills/26" target="_blank" class="odoo-link">BILL/2026/09/0001 ($9,015.36 USD) ↗</a>
               </td>
               <td class="text-right text-success"><strong>+$0.01</strong></td>
-              <td>Factura de flete/gastos aduanales en dólares de <em>Mare Connecting Internacional</em>. <strong>Cuadre exacto al centavo</strong> contra la Balanza.</td>
+              <td>Factura de flete/gastos aduanales en dólares de <em>Mare Connecting Internacional</em> registrada en <code>900.01.03</code>. <strong>Cuadre exacto al centavo</strong> contra la Balanza.</td>
             </tr>
             <tr>
               <td><strong>115.05.04 Otras mercancías en tránsito</strong><br><small class="text-muted">Gastos de Importación Pesos (Contecon, Cima, SENASICA)</small></td>
@@ -1438,7 +1438,7 @@
                 <a href="https://saldos-iniciales-julio.odoo.com/odoo/accounting/vendor-bills/33" target="_blank" class="odoo-link">BILL/2026/09/0002 a 0011 (10 facturas) ↗</a>
               </td>
               <td class="text-right text-warning"><strong>+$76,510.18</strong></td>
-              <td>10 facturas de maniobras portuarias (Contecon), puntos de inspección (Cima) y Senasica registradas en Odoo para los embarques de importación.</td>
+              <td>10 facturas de maniobras portuarias (Contecon), puntos de inspección (Cima) y Senasica registradas en Odoo imputando a <code>900.01.03</code>.</td>
             </tr>
           </tbody>
         </table>
@@ -1475,44 +1475,42 @@
             <tr>
               <td><code>900.01.02</code><br><strong>Saldos iniciales CxC</strong></td>
               <td>Clientes e IVA no cobrado<br><small class="text-muted">105.01, 105.02 y 209.01.01 (39 líneas en balanza)</small></td>
-              <td class="text-right">+$14,274,605.04</td>
-              <td class="text-right">-$14,579,664.35</td>
+              <td class="text-right">+$15,166,450.71</td>
+              <td class="text-right">-$15,471,510.02</td>
               <td class="text-right text-danger"><strong>-$305,059.31</strong></td>
               <td class="text-center"><span class="badge badge-warning">Diferencia CxC + IVA</span></td>
               <td>
-                Incluye <strong>$14.88M</strong> de clientes menos <strong>$608,301.91</strong> de IVA trasladado no cobrado de la balanza.<br>
-                En Odoo las facturas timbradas abonaron a 900.01.02 el subtotal neto ($14.58M). La diferencia neta es de <strong>-$305,059.31 MXN</strong> (combinación de los 7 clientes pendientes y la diferencia en tasa de IVA).
+                En la Balanza se incluyen <strong>$14.88M</strong> de clientes menos <strong>$608,301.91</strong> de IVA trasladado no cobrado.<br>
+                En Odoo las facturas de clientes abonaron a <code>900.01.02</code> su contrapartida neta ($15.47M). La diferencia residual de <strong>-$305,059.31 MXN</strong> se explica por los 7 clientes pendientes de registrar y la diferencia en el IVA no cobrado registrado en facturas.
               </td>
             </tr>
             <tr>
               <td><code>900.01.03</code><br><strong>cxp saldos iniciales</strong></td>
-              <td>Proveedores e IVA pendiente pago<br><small class="text-muted">201.01, 201.02 y 119.01.xx (27 líneas en balanza)</small></td>
-              <td class="text-right">-$49,202,174.76</td>
-              <td class="text-right">+$1,507,989.74</td>
-              <td class="text-right text-danger"><strong>-$47,694,185.02</strong></td>
+              <td>Proveedores, Facturas y Gastos<br><small class="text-muted">201.01, 201.02, 119.01.xx y Facturas Proveedor</small></td>
+              <td class="text-right">-$52,119,706.74</td>
+              <td class="text-right">+$21,268,823.42</td>
+              <td class="text-right text-danger"><strong>-$30,850,883.32</strong></td>
               <td class="text-center"><span class="badge badge-danger">Diferencia CxP + IVA</span></td>
               <td>
-                La Balanza refleja <strong>$50.70M</strong> de proveedores menos <strong>$1.50M</strong> de IVA acreditable pendiente.<br>
+                El 100% de las facturas de proveedor (Agrovet $16.84M, Fletes y Gastos $2.93M) imputan a esta cuenta, junto con el IVA compras reclasificado ($1.50M).<br>
                 <strong>Desglose de Causas:</strong><br>
-                1. <strong>$32,121,255.27 MXN:</strong> 12 proveedores pendientes de registrar facturas en Odoo (ver Sección 2).<br>
-                2. <strong>$16,843,301.70 MXN:</strong> Facturas de <em>Agrovet Market S.A</em> cuya contrapartida se asignó a existencias (900.01.01).<br>
-                3. Compensación de <strong>$1.27M MXN</strong> del IVA acreditable pendiente entre balanza y facturas registradas.
+                1. <strong>-$32,121,255.27 MXN:</strong> 12 proveedores pendientes de registrar facturas en Odoo (ver Sección 2).<br>
+                2. <strong>+$1,270,371.95 MXN:</strong> Compensación de diferencias en IVA acreditable pendiente y pagos parciales conciliados.
               </td>
             </tr>
             <tr>
               <td><code>900.01.01</code><br><strong>Saldos iniciales existencias</strong></td>
-              <td>Inventarios y Mercancías en Tránsito<br><small class="text-muted">115.01 y 115.05.xx (4 líneas en balanza)</small></td>
-              <td class="text-right">+$62,076,909.67</td>
-              <td class="text-right">-$26,237,232.49</td>
-              <td class="text-right text-warning"><strong>+$35,839,677.18</strong></td>
+              <td>Inventarios y Mercancías en Tránsito<br><small class="text-muted">115.01 y 115.05.xx (Exclusivo valoración física STJ)</small></td>
+              <td class="text-right">+$62,154,906.89</td>
+              <td class="text-right">-$43,156,562.89</td>
+              <td class="text-right text-warning"><strong>+$18,998,344.00</strong></td>
               <td class="text-center"><span class="badge badge-warning">En Tránsito / Valuación</span></td>
               <td>
-                La Balanza carga $44.97M en inventario físico y $17.11M en mercancías en tránsito.<br>
+                A esta cuenta <strong>únicamente imputan las pólizas de valoración física de inventario (STJ)</strong>; ninguna factura imputa a existencias.<br>
                 <strong>Desglose de Causas:</strong><br>
-                1. <strong>-$1,887,489.32 MXN:</strong> Diferencia entre la valuación física inicial en Odoo ($43.08M) vs Balanza ($44.97M).<br>
-                2. <strong>+$16,843,301.70 MXN:</strong> Facturas BILL/2026/08/0001 y 0002 de Agrovet reconocidas en 900.01.01.<br>
-                3. <strong>+$16,828,784.23 MXN:</strong> Mercancías en tránsito importación de la balanza (Fila 95, pendiente de recibir en octubre).<br>
-                4. <strong>+$280,101.93 MXN:</strong> Tránsito nacional y gastos de importación de la balanza (Filas 96 y 97).
+                1. <strong>+$1,887,489.32 MXN:</strong> Diferencia entre la valuación física inicial en Odoo ($43.08M) vs Balanza ($44.97M).<br>
+                2. <strong>+$16,828,784.23 MXN:</strong> Mercancías en tránsito importación de la balanza (Fila 38 Agrovet, en tránsito contable al 30 de septiembre).<br>
+                3. <strong>+$280,101.93 MXN:</strong> Tránsito nacional y gastos en tránsito de la balanza (Filas 39 y 40).
               </td>
             </tr>
           </tbody>
