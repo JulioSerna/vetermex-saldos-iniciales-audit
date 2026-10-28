@@ -143,7 +143,7 @@
     /* Executive KPI Cards */
     .kpi-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 16px;
       margin-bottom: 24px;
     }
@@ -189,6 +189,7 @@
       font-weight: 700;
       color: var(--vx-neutral-dark);
       margin-bottom: 8px;
+      white-space: nowrap;
     }
 
     .kpi-subtext {
@@ -196,14 +197,33 @@
       color: var(--vx-secondary);
     }
 
-    .kpi-diff {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      margin-top: 12px;
+    .kpi-meta-box {
+      margin-top: 14px;
       padding-top: 12px;
       border-top: 1px dashed var(--vx-border-subtle);
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .kpi-meta-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
       font-size: 13px;
+      line-height: 1.4;
+    }
+
+    .kpi-meta-label {
+      color: var(--vx-secondary);
+      font-size: 12px;
+    }
+
+    .kpi-meta-val {
+      font-weight: 600;
+      white-space: nowrap;
+      text-align: right;
+      font-variant-numeric: tabular-nums;
     }
 
     /* Section Cards */
@@ -289,7 +309,11 @@
       background-color: #FAFAFA;
     }
 
-    .text-right { text-align: right; }
+    .text-right {
+      text-align: right;
+      white-space: nowrap;
+      font-variant-numeric: tabular-nums;
+    }
     .text-center { text-align: center; }
     .text-success { color: #0D652D; }
     .text-danger { color: #AC0340; }
@@ -466,9 +490,15 @@
         </div>
         <div class="kpi-amount">$14,927,097.34 MXN</div>
         <div class="kpi-subtext">Total en Contabilidad Odoo al 30/09/2026</div>
-        <div class="kpi-diff">
-          <span>Balanza Excel: <strong>$14,882,906.95 MXN</strong></span>
-          <span class="text-danger"><strong>+$44,190.39 MXN</strong></span>
+        <div class="kpi-meta-box">
+          <div class="kpi-meta-row">
+            <span class="kpi-meta-label">Balanza Excel:</span>
+            <span class="kpi-meta-val">$14,882,906.95 MXN</span>
+          </div>
+          <div class="kpi-meta-row">
+            <span class="kpi-meta-label">Diferencia:</span>
+            <span class="kpi-meta-val text-danger">+$44,190.39 MXN</span>
+          </div>
         </div>
       </div>
 
@@ -480,9 +510,15 @@
         </div>
         <div class="kpi-amount">$18,576,368.15 MXN</div>
         <div class="kpi-subtext">Total en Contabilidad Odoo al 30/09/2026</div>
-        <div class="kpi-diff">
-          <span>Balanza Excel: <strong>$50,697,630.02 MXN</strong></span>
-          <span class="text-danger"><strong>$-32,121,261.87 MXN</strong></span>
+        <div class="kpi-meta-box">
+          <div class="kpi-meta-row">
+            <span class="kpi-meta-label">Balanza Excel:</span>
+            <span class="kpi-meta-val">$50,697,630.02 MXN</span>
+          </div>
+          <div class="kpi-meta-row">
+            <span class="kpi-meta-label">Diferencia:</span>
+            <span class="kpi-meta-val text-danger">$-32,121,261.87 MXN</span>
+          </div>
         </div>
       </div>
 
@@ -494,9 +530,15 @@
         </div>
         <div class="kpi-amount">$43,080,534.19 MXN</div>
         <div class="kpi-subtext">Total en Contabilidad Odoo (STJ/2026/09/0001 y 0002)</div>
-        <div class="kpi-diff">
-          <span>Balanza Excel: <strong>$44,968,023.51 MXN</strong></span>
-          <span class="text-danger"><strong>-$1,887,489.32 MXN</strong></span>
+        <div class="kpi-meta-box">
+          <div class="kpi-meta-row">
+            <span class="kpi-meta-label">Balanza Excel:</span>
+            <span class="kpi-meta-val">$44,968,023.51 MXN</span>
+          </div>
+          <div class="kpi-meta-row">
+            <span class="kpi-meta-label">Diferencia:</span>
+            <span class="kpi-meta-val text-danger">-$1,887,489.32 MXN</span>
+          </div>
         </div>
       </div>
 
@@ -508,9 +550,15 @@
         </div>
         <div class="kpi-amount">$254,728,116.76 MXN</div>
         <div class="kpi-subtext"><a href="https://saldos-iniciales-julio.odoo.com/odoo/accounting/entries/15242" target="_blank" style="color: inherit; text-decoration: underline;">MISC/2026/09/0004 (ID 15242) ↗</a></div>
-        <div class="kpi-diff">
-          <span>Debe = Haber: <strong>Cuadre exacto al $0.00</strong></span>
-          <span class="text-success"><strong>Publicada</strong></span>
+        <div class="kpi-meta-box">
+          <div class="kpi-meta-row">
+            <span class="kpi-meta-label">Cuadre Contable:</span>
+            <span class="kpi-meta-val text-success">Debe = Haber ($0.00)</span>
+          </div>
+          <div class="kpi-meta-row">
+            <span class="kpi-meta-label">Estado:</span>
+            <span class="kpi-meta-val text-success">Publicada (posted)</span>
+          </div>
         </div>
       </div>
     </div>
