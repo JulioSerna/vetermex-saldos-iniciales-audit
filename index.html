@@ -1463,29 +1463,29 @@
           <tbody>
             <tr>
               <td><code>900.01.02</code><br><strong>Saldos iniciales CxC</strong></td>
-              <td>Clientes Nacionales y Extranjeros<br><small class="text-muted">105.01 y 105.02 (38 líneas en balanza)</small></td>
-              <td class="text-right">+$14,882,906.95</td>
+              <td>Clientes e IVA no cobrado<br><small class="text-muted">105.01, 105.02 y 209.01.01 (39 líneas en balanza)</small></td>
+              <td class="text-right">+$14,274,605.04</td>
               <td class="text-right">-$14,579,664.35</td>
-              <td class="text-right text-danger"><strong>+$303,242.60</strong></td>
-              <td class="text-center"><span class="badge badge-warning">Diferencia CxC</span></td>
+              <td class="text-right text-danger"><strong>-$305,059.31</strong></td>
+              <td class="text-center"><span class="badge badge-warning">Diferencia CxC + IVA</span></td>
               <td>
-                La Balanza tiene <strong>$303,242.60 MXN más</strong> en CxC que las facturas timbradas cargadas en Odoo.<br>
-                Corresponde exactamente a los <strong>7 clientes con diferencia</strong> documentados en la Sección 1, principalmente <em>Agropecuaria El Ciervo</em> ($134,803.96), <em>Dra. Beatriz Gomez</em> ($97,000.00) y <em>La Guadalupana</em> ($54,233.00).
+                Incluye <strong>$14.88M</strong> de clientes menos <strong>$608,301.91</strong> de IVA trasladado no cobrado de la balanza.<br>
+                En Odoo las facturas timbradas abonaron a 900.01.02 el subtotal neto ($14.58M). La diferencia neta es de <strong>-$305,059.31 MXN</strong> (combinación de los 7 clientes pendientes y la diferencia en tasa de IVA).
               </td>
             </tr>
             <tr>
               <td><code>900.01.03</code><br><strong>cxp saldos iniciales</strong></td>
-              <td>Proveedores Nacionales y Extranjeros<br><small class="text-muted">201.01 y 201.02 (25 líneas en balanza)</small></td>
-              <td class="text-right">-$50,697,630.02</td>
+              <td>Proveedores e IVA pendiente pago<br><small class="text-muted">201.01, 201.02 y 119.01.xx (27 líneas en balanza)</small></td>
+              <td class="text-right">-$49,202,174.76</td>
               <td class="text-right">+$1,507,989.74</td>
-              <td class="text-right text-danger"><strong>-$49,189,640.28</strong></td>
-              <td class="text-center"><span class="badge badge-danger">Diferencia CxP</span></td>
+              <td class="text-right text-danger"><strong>-$47,694,185.02</strong></td>
+              <td class="text-center"><span class="badge badge-danger">Diferencia CxP + IVA</span></td>
               <td>
-                La Balanza refleja <strong>$50.70M MXN</strong> en pasivos con proveedores, mientras que en Odoo solo se tienen facturas con contrapartida en 900.01.03 por <strong>$1.51M MXN</strong>.<br>
+                La Balanza refleja <strong>$50.70M</strong> de proveedores menos <strong>$1.50M</strong> de IVA acreditable pendiente.<br>
                 <strong>Desglose de Causas:</strong><br>
-                1. <strong>$32,121,255.27 MXN:</strong> 12 proveedores de la balanza pendientes de registrar sus facturas en Odoo (ver Sección 2).<br>
-                2. <strong>$16,843,301.70 MXN:</strong> Facturas de <em>Agrovet Market S.A</em> cuya contrapartida se asignó a inventario (900.01.01) en lugar de CxP (900.01.03).<br>
-                3. <strong>$225,083.31 MXN:</strong> Diferencia de IVA retenido / acreditable pendiente entre facturas y balanza.
+                1. <strong>$32,121,255.27 MXN:</strong> 12 proveedores pendientes de registrar facturas en Odoo (ver Sección 2).<br>
+                2. <strong>$16,843,301.70 MXN:</strong> Facturas de <em>Agrovet Market S.A</em> cuya contrapartida se asignó a existencias (900.01.01).<br>
+                3. Compensación de <strong>$1.27M MXN</strong> del IVA acreditable pendiente entre balanza y facturas registradas.
               </td>
             </tr>
             <tr>
@@ -1513,6 +1513,66 @@
             </tr>
           </tfoot>
         </table>
+      </div>
+
+      <!-- SUBSECCIÓN 4.1: CONCILIACIÓN Y DIFERENCIAS EN CUENTAS DE IVA -->
+      <div style="margin-top: 32px;">
+        <h3 style="font-family: var(--font-heading); color: var(--vx-primary); margin-bottom: 8px;">4.1 Conciliación y Diferencias en Cuentas de IVA (Balanza Excel vs Odoo)</h3>
+        <p class="section-desc">
+          Comparativa entre los saldos de IVA pendiente de cobro y de pago en la Balanza del Excel vs lo registrado por las facturas timbradas en Odoo al 30/09/2026:
+        </p>
+        <div class="table-responsive">
+          <table>
+            <thead>
+              <tr>
+                <th>Rubro de Impuesto</th>
+                <th>Cuenta en Balanza (Excel)</th>
+                <th>Cuenta en Odoo</th>
+                <th class="text-right">Monto en Balanza (MXN)</th>
+                <th class="text-right">Monto en Odoo (MXN)</th>
+                <th class="text-right">Diferencia (MXN)</th>
+                <th class="text-center">Diagnóstico y Explicación Técnica</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>IVA Trasladado No Cobrado (Ventas / CxC)</strong></td>
+                <td><code>209.01.01</code> (Fila 405)</td>
+                <td><a href="https://saldos-iniciales-julio.odoo.com/odoo/accounting/entries?view_type=list&domain=%5B%28%27account_id.code%27%2C%27%3D%27%2C%27209.01.01%27%29%2C%28%27date%27%2C%27%3C%3D%27%2C%272026-09-30%27%29%5D" target="_blank" class="odoo-link">209.01.01 (Facturas FHV) ↗</a></td>
+                <td class="text-right">-$608,301.91</td>
+                <td class="text-right">-$347,432.99</td>
+                <td class="text-right text-danger"><strong>+$260,868.92</strong></td>
+                <td>
+                  La Balanza tiene <strong>$260,868.92 MXN más</strong> de IVA pendiente de cobro que las facturas cargadas en Odoo.<br>
+                  <em>Causa:</em> En Odoo la mayoría de las facturas de clientes corresponden a medicamentos y biológicos a tasa 0% de IVA, sumado a las facturas pendientes de timbrar de los 7 clientes identificados.
+                </td>
+              </tr>
+              <tr>
+                <td><strong>IVA Acreditable Pendiente de Pago (Compras / CxP)</strong></td>
+                <td><code>119.01.02</code> y <code>119.01.03</code> (Filas 103–104)</td>
+                <td><a href="https://saldos-iniciales-julio.odoo.com/odoo/accounting/entries?view_type=list&domain=%5B%28%27account_id.code%27%2C%27%3D%27%2C%27119.01.01%27%29%2C%28%27date%27%2C%27%3C%3D%27%2C%272026-09-30%27%29%5D" target="_blank" class="odoo-link">119.01.01 (Facturas FHP/BILL) ↗</a></td>
+                <td class="text-right">+$1,495,455.26</td>
+                <td class="text-right">+$225,076.71</td>
+                <td class="text-right text-danger"><strong>-$1,270,378.55</strong></td>
+                <td>
+                  La Balanza tiene <strong>$1,270,378.55 MXN más</strong> de IVA acreditable pendiente que Odoo.<br>
+                  <em>Causa:</em> En Odoo solo se tienen 12 facturas de gastos de proveedor timbradas ($225K de IVA neto). El resto ($1.27M de IVA) corresponde a las facturas de los <strong>12 proveedores pendientes</strong> de registrar ($32.12M en pasivos).
+                </td>
+              </tr>
+              <tr>
+                <td><strong>IVA Acreditable Pagado (Base de Efectivo)</strong></td>
+                <td><code>118.01.01</code> (Fila 56)</td>
+                <td><code>118.01.01</code></td>
+                <td class="text-right">+$1,366,555.61</td>
+                <td class="text-right">$0.00</td>
+                <td class="text-right text-success"><strong>$0.00 (Sin duplicar)</strong></td>
+                <td>
+                  El IVA pagado histórico se respeta íntegramente desde la Balanza en la póliza de apertura. Los $195,675.95 generados por parcialidades en CBMX se reclasificaron a <code>900.01.03</code> para evitar duplicar el saldo de apertura.
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </div>
     </div>
 
