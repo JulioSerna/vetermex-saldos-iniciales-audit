@@ -1388,8 +1388,8 @@
               <td><code>900.01.02</code><br><strong>Saldos iniciales CxC</strong></td>
               <td>Clientes e IVA no cobrado<br><small class="text-muted">105.01, 105.02 y 209.01.01</small></td>
               <td class="text-right">+$15,258,842.75</td>
-              <td class="text-right">-$15,265,059.64</td>
-              <td class="text-right text-success"><strong>$-6,216.89</strong></td>
+              <td class="text-right">-$15,265,475.57</td>
+              <td class="text-right text-success"><strong>$-6,632.82</strong></td>
               <td class="text-center"><span class="badge badge-success">Conciliado</span></td>
               <td>Las facturas XML nuevas (874, 875, 876), notas de cargo (NC342, NC345, NC346) y parcialidades se integraron a la cuenta puente <code>900.01.02</code> (cuadre de CxC a $-2.01 MXN).</td>
             </tr>
@@ -1436,38 +1436,59 @@
           <table>
             <thead>
               <tr>
-                <th>Rubro de Impuesto</th>
+                <th>Impuesto en Facturas de Saldos Iniciales</th>
                 <th>Cuenta en Balanza (Excel)</th>
                 <th>Cuenta en Odoo</th>
+                <th class="text-right">Monto Facturas Odoo (MXN)</th>
                 <th class="text-right">Monto en Balanza (MXN)</th>
-                <th class="text-right">Monto en Odoo (MXN)</th>
                 <th class="text-right">Diferencia (MXN)</th>
                 <th class="text-center">Diagnóstico y Explicación Técnica</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td><strong>IVA Pagado Efectivo (Compras CBMX)</strong></td>
-                <td><code>118.01.01</code> (<a href="https://docs.google.com/spreadsheets/d/1UPZfwWOdPIdLPaaT3-73masv6em3ZzN9/edit#gid=0&range=A55" target="_blank" class="drive-link">Fila 55 ↗</a>)</td>
-                <td><a href="https://saldos-iniciales-julio.odoo.com/odoo/accounting/entries?view_type=list&domain=%5B%28%27account_id.code%27%2C%27%3D%27%2C%27118.01.01%27%29%2C%28%27date%27%2C%27%3C%3D%27%2C%272026-09-30%27%29%5D" target="_blank" class="odoo-link">118.01.01 ↗</a></td>
-                <td class="text-right">+$1,001,786.23</td>
-                <td class="text-right">+$1,001,786.23</td>
-                <td class="text-right text-success"><strong>$0.00</strong></td>
-                <td><span class="badge badge-success">Cuadre Exacto $0.00</span> El IVA efectivamente pagado de la balanza cuadra exactamente al centavo (pólizas CBMX reclasificadas a <code>900.01.03</code>).</td>
-              </tr>
-              <tr>
-                <td><strong>IVA Trasladado No Cobrado (Ventas / CxC)</strong></td>
+                <td><strong>IVA Trasladado No Cobrado (Facturas Clientes FHV)</strong></td>
                 <td><code>209.01.01</code> (<a href="https://docs.google.com/spreadsheets/d/1UPZfwWOdPIdLPaaT3-73masv6em3ZzN9/edit#gid=0&range=A400" target="_blank" class="drive-link">Fila 400 ↗</a>)</td>
                 <td><a href="https://saldos-iniciales-julio.odoo.com/odoo/accounting/entries?view_type=list&domain=%5B%28%27account_id.code%27%2C%27%3D%27%2C%27209.01.01%27%29%2C%28%27date%27%2C%27%3C%3D%27%2C%272026-09-30%27%29%5D" target="_blank" class="odoo-link">209.01.01 (Facturas FHV) ↗</a></td>
-                <td class="text-right">$-353,651.89</td>
                 <td class="text-right">$-347,017.06</td>
+                <td class="text-right">$-353,651.89</td>
                 <td class="text-right text-success"><strong>+$6,634.83</strong></td>
                 <td>
-                  <span class="badge badge-success">Conciliado (Diff 1.8%)</span> La Balanza registra $353,651.89 MXN en <code>209.01.01</code> frente a $347,017.06 MXN generados por las facturas timbradas de clientes en Odoo (diferencia de apenas $6,634.83 MXN atribuible a variaciones menores de redondeo fiscal en el cálculo de base gravable vs tasa 0%).
+                  <span class="badge badge-success">Conciliado (Diff 1.8%)</span> Las facturas timbradas de clientes en Odoo (FHV/RFHV) generan $347,017.06 MXN en <code>209.01.01</code> (27 líneas) frente a $353,651.89 MXN en Balanza (variación de apenas $6,634.83 MXN por redondeo de timbrado fiscal SAT).
+                </td>
+              </tr>
+              <tr>
+                <td><strong>IVA Acreditable Pendiente de Pago (Facturas Proveedores FHP)</strong></td>
+                <td><code>119.01.xx</code> (<a href="https://docs.google.com/spreadsheets/d/1UPZfwWOdPIdLPaaT3-73masv6em3ZzN9/edit#gid=0&range=A102" target="_blank" class="drive-link">Filas 102-103 ↗</a>)</td>
+                <td><a href="https://saldos-iniciales-julio.odoo.com/odoo/accounting/entries?view_type=list&domain=%5B%28%27account_id.code%27%2C%27%3D%27%2C%27119.01.01%27%29%2C%28%27date%27%2C%27%3C%3D%27%2C%272026-09-30%27%29%5D" target="_blank" class="odoo-link">119.01.01 (Facturas FHP) ↗</a></td>
+                <td class="text-right">+$489,357.55</td>
+                <td class="text-right">+$1,619,742.43</td>
+                <td class="text-right text-secondary"><strong>-$1,130,384.88</strong></td>
+                <td>
+                  <span class="badge badge-info">Auditoría CxP</span> Las 19 facturas de proveedores importadas en Odoo (FHP) generan +$489,357.55 MXN en <code>119.01.01</code>. En la Balanza, el cliente agrupó IVA pendiente en Fletes (+$1,608,788.10) y Honorarios (+$10,954.33), el cual se reclasificó en la póliza general a <code>900.01.03</code> para evitar duplicar el pasivo.
                 </td>
               </tr>
             </tbody>
           </table>
+        </div>
+
+        <div style="margin-top: 24px; padding: 18px 20px; background: #f8fafc; border: 1px solid #e2e8f0; border-left: 4px solid #455a64; border-radius: 8px;">
+          <h4 style="margin: 0 0 10px 0; color: #282c2f; font-size: 15px;">Blindaje de IVA Efectivamente Cobrado y Pagado (Pólizas CBMX)</h4>
+          <p style="margin: 0 0 12px 0; font-size: 13.5px; color: #475569; line-height: 1.5;">
+            Por regla contable de saldos iniciales, las pólizas de pago/cobro en efectivo no deben alterar las cuentas de IVA cobrado (<code>208.01.01</code>) ni pagado (<code>118.01.01</code>) para no duplicar los saldos históricos de la Balanza. Las contrapartidas de IVA efectivo en pólizas CBMX se reclasifican a las cuentas puente correspondientes (<code>900.01.02 CxC</code> y <code>900.01.03 CxP</code>):
+          </p>
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 14px;">
+            <div style="background: #ffffff; border: 1px solid #cbd5e1; border-radius: 6px; padding: 12px 14px;">
+              <div style="font-size: 12px; font-weight: 600; color: #64748b; text-transform: uppercase;">IVA Acreditable Pagado (118.01.01)</div>
+              <div style="font-size: 16px; font-weight: 700; color: #059669; margin: 4px 0;">+$1,001,786.23 MXN</div>
+              <div style="font-size: 12px; color: #475569;">Balanza: +$1,001,786.23 | Diff: $0.00 | CBMX pendientes: 0</div>
+            </div>
+            <div style="background: #ffffff; border: 1px solid #cbd5e1; border-radius: 6px; padding: 12px 14px;">
+              <div style="font-size: 12px; font-weight: 600; color: #64748b; text-transform: uppercase;">IVA Trasladado Cobrado (208.01.01)</div>
+              <div style="font-size: 16px; font-weight: 700; color: #059669; margin: 4px 0;">$-792,493.02 MXN</div>
+              <div style="font-size: 12px; color: #475569;">Balanza: $-792,493.02 | Diff: $0.00 | CBMX pendientes: 0</div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
