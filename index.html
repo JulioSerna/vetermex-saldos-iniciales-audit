@@ -1435,10 +1435,10 @@
           <table>
             <thead>
               <tr>
-                <th>Impuesto en Facturas de Saldos Iniciales</th>
+                <th>Impuestos Pendientes al 30/09/2026</th>
                 <th>Cuenta en Balanza (Excel)</th>
                 <th>Cuenta en Odoo</th>
-                <th class="text-right">Monto Facturas Odoo (MXN)</th>
+                <th class="text-right">Balance Total Odoo (MXN)</th>
                 <th class="text-right">Monto en Balanza (MXN)</th>
                 <th class="text-right">Diferencia (MXN)</th>
                 <th class="text-center">Diagnóstico y Explicación Técnica</th>
@@ -1453,18 +1453,18 @@
                 <td class="text-right">$-353,651.89</td>
                 <td class="text-right text-success"><strong>+$6,634.83</strong></td>
                 <td>
-                  <span class="badge badge-success">Conciliado (Diff 1.8%)</span> Las facturas timbradas de clientes en Odoo (FHV/RFHV) generan $347,017.06 MXN en <code>209.01.01</code> (27 líneas) frente a $353,651.89 MXN en Balanza (variación de apenas $6,634.83 MXN por redondeo de timbrado fiscal SAT).
+                  <span class="badge badge-success">Conciliado (Diff 1.8%)</span> El balance total en Odoo al 30/09/2026 es de <strong>$-347,017.06 MXN</strong> (27 líneas) frente a $-353,651.89 MXN en Balanza (variación de apenas +$6,634.83 MXN por redondeo fiscal SAT).
                 </td>
               </tr>
               <tr>
-                <td><strong>IVA Acreditable Pendiente de Pago (Facturas Proveedores FHP)</strong></td>
+                <td><strong>IVA Acreditable Pendiente de Pago</strong></td>
                 <td><code>119.01.xx</code> (<a href="https://docs.google.com/spreadsheets/d/1UPZfwWOdPIdLPaaT3-73masv6em3ZzN9/edit#gid=0&range=A102" target="_blank" class="drive-link">Filas 102-103 ↗</a>)</td>
-                <td><a href="https://saldos-iniciales-julio.odoo.com/odoo/accounting/entries?view_type=list&domain=%5B%28%27account_id.code%27%2C%27%3D%27%2C%27119.01.01%27%29%2C%28%27date%27%2C%27%3C%3D%27%2C%272026-09-30%27%29%5D" target="_blank" class="odoo-link">119.01.01 (Facturas FHP) ↗</a></td>
-                <td class="text-right">+$489,357.55</td>
+                <td><a href="https://saldos-iniciales-julio.odoo.com/odoo/accounting/entries?view_type=list&domain=%5B%28%27account_id.code%27%2C%27%3D%27%2C%27119.01.01%27%29%2C%28%27date%27%2C%27%3C%3D%27%2C%272026-09-30%27%29%5D" target="_blank" class="odoo-link">119.01.01 (VAT due) ↗</a></td>
+                <td class="text-right">+$207,970.71</td>
                 <td class="text-right">+$1,619,742.43</td>
-                <td class="text-right text-secondary"><strong>-$1,130,384.88</strong></td>
+                <td class="text-right text-secondary"><strong>$-1,411,771.72</strong></td>
                 <td>
-                  <span class="badge badge-info">Auditoría CxP</span> Las 19 facturas de proveedores importadas en Odoo (FHP) generan +$489,357.55 MXN en <code>119.01.01</code>. En la Balanza, el cliente agrupó IVA pendiente en Fletes (+$1,608,788.10) y Honorarios (+$10,954.33), el cual se reclasificó en la póliza general a <code>900.01.03</code> para evitar duplicar el pasivo.
+                  <span class="badge badge-info">Auditoría CxP</span> El balance total en Odoo al 30/09/2026 es de <strong>+$207,970.71 MXN</strong> (IVA insoluto real de las facturas por pagar tras aplicar -$293,782.54 de abonos CBMX al IVA inicial de facturas de $501,753.25). En la Balanza, el cliente arrastra +$1,619,742.43 MXN (Fletes +$1,608,788.10 y Honorarios +$10,954.33). La diferencia de <strong>$-1,411,771.72 MXN</strong> compensa al centavo la cuenta puente <code>900.01.03</code> (+$1,411,762.64) y la variación cambiaria de CxP ($-9.08 MXN).
                 </td>
               </tr>
             </tbody>
